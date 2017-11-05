@@ -19,11 +19,16 @@ public class read_unknown_file {
 //        print_files_in_directory("./storage");
         List<String> file_text = read_file("./storage/old_1.txt");
         determine_file_type(file_text);
+        xml_type_getter(file_text);
 
         file_text = read_file("./storage/new_1.txt");
         document_header_getter(file_text);
+        xml_type_getter(file_text);
 
         file_text = read_file("./storage/new_2.txt");
+        xml_type_getter(file_text);
+
+        file_text = read_file("./storage/new_3.txt");
         xml_type_getter(file_text);
 
     }
@@ -69,10 +74,27 @@ public class read_unknown_file {
     public static void xml_type_getter(List<String> text_lines) {
         int text_lines_length = text_lines.size();
         text_lines = text_lines.subList(text_lines_length - 10, text_lines_length);
+        for(int i = 0; i < text_lines.size(); i++) {
+            text_lines.set(i, text_lines.get(i).replaceAll("\\s+",""));
+        }
+
+        String xml_type = "#";
 
         for(String line : text_lines) {
-            System.out.println(line);
+            String[] elements = line.split(":");
+            if (elements[0].equals("</informationTable>")) {
+                xml_type = "";
+                break;
+            } else if (elements[0].equals("</n1")) {
+                xml_type = "n1";
+                break;
+            } else if (elements[0].equals("</ns1")) {
+                xml_type = "ns1";
+                break;
+            }
         }
+
+        System.out.println(xml_type);
     }
 
 
