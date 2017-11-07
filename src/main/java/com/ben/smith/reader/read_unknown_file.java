@@ -42,10 +42,9 @@ public class read_unknown_file {
                 return "old_1";
             }
         }
+        String xml_type = xml_type_getter(text_lines);
 
-
-
-        return "unknown";
+        return xml_type;
     }
 
     // Read a file into a string list
@@ -71,7 +70,7 @@ public class read_unknown_file {
     }
 
     // Get the type xml variant used in the 13f
-    public static void xml_type_getter(List<String> text_lines) {
+    public static String xml_type_getter(List<String> text_lines) {
         int text_lines_length = text_lines.size();
         text_lines = text_lines.subList(text_lines_length - 10, text_lines_length);
         for(int i = 0; i < text_lines.size(); i++) {
@@ -94,7 +93,7 @@ public class read_unknown_file {
             }
         }
 
-        System.out.println(xml_type);
+        return xml_type;
     }
 
 
