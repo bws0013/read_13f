@@ -16,10 +16,10 @@ public class read_unknown_file {
 
     public static void main(String[] args) {
 
-//        print_files_in_directory("./storage");
         List<String> file_text = read_file("./storage/old_1.txt");
-        determine_file_type(file_text);
-        xml_type_getter(file_text);
+        String res = determine_file_type(file_text);
+        System.out.println(res);
+        if (true == true) return;
 
         file_text = read_file("./storage/new_1.txt");
         document_header_getter(file_text);

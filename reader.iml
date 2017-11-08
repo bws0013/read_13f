@@ -12,8 +12,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
-    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-api:5.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.opentest4j:opentest4j:1.0.0" level="project" />
-    <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-commons:1.0.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.5" level="project" />
   </component>
 </module>
