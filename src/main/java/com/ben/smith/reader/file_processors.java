@@ -11,7 +11,13 @@ import static com.ben.smith.reader.read_unknown_file.read_file;
 public class file_processors {
 
     public static void main(String[] args) {
+
         List<String> valuable_lines = read_old_1("./storage/old_1.txt");
+//        process_old_1(valuable_lines);
+
+        int smallest = get_name_length(valuable_lines);
+        System.out.println(smallest);
+
     }
 
     public static List<String> read_old_1(String filename) {
@@ -34,4 +40,52 @@ public class file_processors {
         return lines_we_care_about;
     }
 
+    public static void process_old_1(List<String> security_content) {
+
+        for(String security : security_content) {
+
+            String[] arr = security.split("\t");
+
+            for(String a : arr) {
+                System.out.print(a + ",");
+            }
+            System.out.println();
+        }
+
+    }
+
+    public static int get_name_length(List<String> lines) {
+        List<String> elements = new ArrayList<>();
+
+        List<Integer> possible_lengths = new ArrayList<>();
+
+        for(String line : lines) {
+            int letter_count = 0;
+            int space_count = 0;
+            for(int i = 0; i < line.length(); i++) {
+
+                if (line.charAt(i) == ' ' && line.charAt(i - 1) != ' ') {
+                    letter_count++;
+                } else if (line.charAt(i) == ' ') {
+                    letter_count++;
+                    space_count++;
+                } else if (line.charAt(i) != ' ' && space_count > 1) {
+                    possible_lengths.add(letter_count);
+                    break;
+                } else {
+                    letter_count++;
+                }
+            }
+        }
+
+        int smallest = possible_lengths.get(0);
+        for(int i : possible_lengths) {
+            if(i < smallest) {
+                i = smallest;
+            }
+        }
+        return smallest;
+    }
 }
+
+
