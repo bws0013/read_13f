@@ -3,7 +3,10 @@ package com.ben.smith.reader;
 /**
  * Created by bensmith on 11/7/17.
  */
-public class asset {
+public class Asset {
+
+    public String cik;
+    public String confirmation_period;
 
     public String name;
     public String title;
@@ -14,18 +17,37 @@ public class asset {
     public String type;
     public String discretion;
 
-    public asset(String name, String title, String cusip, String cash_value, String num_shares, String type, String discretion) {
+    public Asset(String name, String title, String cusip, String cash_value, String num_shares, String type, String discretion) {
         this.name = name;
         this.title = title;
         this.cusip = cusip;
+        this.excel_cusip = "#" + cusip;
         this.cash_value = cash_value;
         this.num_shares = num_shares;
         this.type = type;
         this.discretion = discretion;
     }
 
-    public asset(String line) {
 
+    public Asset(String line) {
+
+    }
+
+    public void add_identifying_info(String cik, String confirmation_period) {
+        this.cik = cik;
+        this.confirmation_period = confirmation_period;
+    }
+
+    public void print_all_fields() {
+        System.out.printf("name: %s\n", name);
+        System.out.printf("title: %s\n", title);
+        System.out.printf("cusip: %s\n", cusip);
+        System.out.printf("excel_cusip: %s\n", excel_cusip);
+        System.out.printf("cash_value (x$1000): %s\n", cash_value);
+        System.out.printf("num_shares: %s\n", num_shares);
+        System.out.printf("type: %s\n", type);
+        System.out.printf("discretion: %s\n", discretion);
+        System.out.println("==============================");
     }
 
     public String getName() {
@@ -90,5 +112,21 @@ public class asset {
 
     public void setDiscretion(String discretion) {
         this.discretion = discretion;
+    }
+
+    public String getCik() {
+        return cik;
+    }
+
+    public void setCik(String cik) {
+        this.cik = cik;
+    }
+
+    public String getConfirmation_period() {
+        return confirmation_period;
+    }
+
+    public void setConfirmation_period(String confirmation_period) {
+        this.confirmation_period = confirmation_period;
     }
 }

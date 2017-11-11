@@ -16,9 +16,12 @@ public class read_unknown_file {
 
     public static void main(String[] args) {
 
-        List<String> file_text = read_file("./storage/old_1.txt");
-        String res = determine_file_type(file_text);
-        System.out.println(res);
+        String file_name = "./storage/old_1.txt";
+        List<String> file_text = read_file(file_name);
+        String file_type = determine_file_type(file_text);
+
+        pass_to_processors(file_type, file_name);
+
         if (true == true) return;
 
         file_text = read_file("./storage/new_1.txt");
@@ -32,6 +35,16 @@ public class read_unknown_file {
         xml_type_getter(file_text);
 
     }
+
+
+    public static void pass_to_processors(String file_type, String file_name) {
+
+        if(file_type.equals("old_1")) {
+            List<Asset> assets = file_processor_old_1.get_assets(file_name);
+        }
+
+    }
+
 
     // Used for determining what we will need to read the document with
     public static String determine_file_type(List<String> text_lines) {
