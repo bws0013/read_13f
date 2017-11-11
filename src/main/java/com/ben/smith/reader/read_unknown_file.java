@@ -16,11 +16,11 @@ public class read_unknown_file {
 
     public static void main(String[] args) {
 
-        String file_name = "./storage/old_1.txt";
-        List<String> file_text = read_file(file_name);
+        String filename = "./storage/old_1.txt";
+        List<String> file_text = read_file(filename);
         String file_type = determine_file_type(file_text);
 
-        pass_to_processors(file_type, file_name);
+        pass_to_processors(file_type, filename);
 
         if (true == true) return;
 
@@ -37,10 +37,10 @@ public class read_unknown_file {
     }
 
 
-    public static void pass_to_processors(String file_type, String file_name) {
+    public static void pass_to_processors(String file_type, String filename) {
 
         if(file_type.equals("old_1")) {
-            List<Asset> assets = file_processor_old_1.get_assets(file_name);
+            List<Asset> assets = file_processor_old.get_assets(filename);
         }
 
     }
