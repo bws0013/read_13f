@@ -1,0 +1,1491 @@
+<SEC-DOCUMENT>0001106191-14-000018.txt : 20140515
+<SEC-HEADER>0001106191-14-000018.hdr.sgml : 20140515
+<ACCEPTANCE-DATETIME>20140515170548
+ACCESSION NUMBER:		0001106191-14-000018
+CONFORMED SUBMISSION TYPE:	13F-HR
+PUBLIC DOCUMENT COUNT:		2
+CONFORMED PERIOD OF REPORT:	20140331
+FILED AS OF DATE:		20140515
+DATE AS OF CHANGE:		20140515
+EFFECTIVENESS DATE:		20140515
+
+FILER:
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			GMT CAPITAL CORP
+		CENTRAL INDEX KEY:			0001106191
+		IRS NUMBER:				582021147
+
+	FILING VALUES:
+		FORM TYPE:		13F-HR
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	028-05497
+		FILM NUMBER:		14848676
+
+	BUSINESS ADDRESS:	
+		STREET 1:		GMT CAPITAL CORP
+		STREET 2:		2300 WINDY RIDGE PARKWAY SUITE 550 SOUTH
+		CITY:			ATLANTA
+		STATE:			GA
+		ZIP:			30339
+		BUSINESS PHONE:		7709898250
+
+	MAIL ADDRESS:	
+		STREET 1:		GMT CAPITAL CORP
+		STREET 2:		2300 WINDY RIDGE PARKWAY SUITE 550 SOUTH
+		CITY:			ATLANTA
+		STATE:			GA
+		ZIP:			30339
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>13F-HR
+<SEQUENCE>1
+<FILENAME>primary_doc.xml
+<TEXT>
+<XML>
+<?xml version="1.0" encoding="UTF-8"?>
+<edgarSubmission xmlns="http://www.sec.gov/edgar/thirteenffiler" xmlns:com="http://www.sec.gov/edgar/common">
+  <headerData>
+    <submissionType>13F-HR</submissionType>
+    <filerInfo>
+      <liveTestFlag>LIVE</liveTestFlag>
+      <flags>
+        <confirmingCopyFlag>false</confirmingCopyFlag>
+        <returnCopyFlag>false</returnCopyFlag>
+        <overrideInternetFlag>true</overrideInternetFlag>
+      </flags>
+      <filer>
+        <credentials>
+          <cik>0001106191</cik>
+          <ccc>XXXXXXXX</ccc>
+        </credentials>
+      </filer>
+      <periodOfReport>03-31-2014</periodOfReport>
+    </filerInfo>
+  </headerData>
+  <formData>
+    <coverPage>
+      <reportCalendarOrQuarter>03-31-2014</reportCalendarOrQuarter>
+      <filingManager>
+        <name>GMT CAPITAL CORP</name>
+        <address>
+          <com:street1>GMT CAPITAL CORP</com:street1>
+          <com:street2>2300 WINDY RIDGE PARKWAY SUITE 550 SOUTH</com:street2>
+          <com:city>ATLANTA</com:city>
+          <com:stateOrCountry>GA</com:stateOrCountry>
+          <com:zipCode>30339</com:zipCode>
+        </address>
+      </filingManager>
+      <reportType>13F HOLDINGS REPORT</reportType>
+      <form13FFileNumber>028-05497</form13FFileNumber>
+      <provideInfoForInstruction5>N</provideInfoForInstruction5>
+    </coverPage>
+    <signatureBlock>
+      <name>Philip Meyers</name>
+      <title>VP Head of Compliance</title>
+      <phone>770-989-8263</phone>
+      <signature>/s/ Philip Meyers</signature>
+      <city>Atlanta</city>
+      <stateOrCountry>GA</stateOrCountry>
+      <signatureDate>05-15-2014</signatureDate>
+    </signatureBlock>
+    <summaryPage>
+      <otherIncludedManagersCount>0</otherIncludedManagersCount>
+      <tableEntryTotal>86</tableEntryTotal>
+      <tableValueTotal>4624290</tableValueTotal>
+      <isConfidentialOmitted>false</isConfidentialOmitted>
+    </summaryPage>
+  </formData>
+</edgarSubmission>
+</XML>
+</TEXT>
+</DOCUMENT>
+<DOCUMENT>
+<TYPE>INFORMATION TABLE
+<SEQUENCE>2
+<FILENAME>Final_GMT_Form_13F_03_31_14.xml
+<TEXT>
+<XML>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<n1:informationTable xmlns:n1="http://www.sec.gov/edgar/document/thirteenf/informationtable">
+	<n1:infoTable>
+		<n1:nameOfIssuer>Canadian Natural Resources </n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>2171573</n1:cusip>
+		<n1:value>282929</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>7370380</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>7370380</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>21Vianet Group, Inc.</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>90138a103</n1:cusip>
+		<n1:value>5941</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>207000</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>207000</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Aaron's, Inc.</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>002535300</n1:cusip>
+		<n1:value>9514</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>314600</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>314600</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Active Power </n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>00504w308</n1:cusip>
+		<n1:value>50</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>15074</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>15074</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Alico</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>016230104</n1:cusip>
+		<n1:value>22491</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>596581</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>596581</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>American Axle</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>024061103</n1:cusip>
+		<n1:value>62388</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>3368700</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>3368700</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>American Express Company</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>025816109</n1:cusip>
+		<n1:value>3286</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>36500</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>36500</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>American International Group, </n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>026874784</n1:cusip>
+		<n1:value>42043</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>840700</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>840700</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Anadarko Petroleum</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>032511107</n1:cusip>
+		<n1:value>118020</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>1392400</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>1392400</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Apache Corp</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>037411105</n1:cusip>
+		<n1:value>75823</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>914077</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>914077</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Apollo Global Management, LLC</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>037612306</n1:cusip>
+		<n1:value>146495</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>4606774</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>4606774</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Avnet Inc</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>053807103</n1:cusip>
+		<n1:value>18682</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>401500</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>401500</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Baidu, Inc.</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>056752108</n1:cusip>
+		<n1:value>49381</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>324300</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>324300</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Baltic Trading Ltd.</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>y0553w103</n1:cusip>
+		<n1:value>9076</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>1438274</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>1438274</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Berkshire Hathaway Inc</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>084670702</n1:cusip>
+		<n1:value>92665</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>741500</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>741500</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Blackstone Group L.P.</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>09253u108</n1:cusip>
+		<n1:value>65399</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>1966900</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>1966900</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>CNO Financial Group, Inc.</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>12621e103</n1:cusip>
+		<n1:value>29355</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>1621800</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>1621800</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Cameco Corp</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>13321l108</n1:cusip>
+		<n1:value>3804</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>166100</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>166100</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Capital One Financial Co</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>14040H105</n1:cusip>
+		<n1:value>186210</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>2413300</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>2413300</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Cedar Fair, L.P.</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>150185106</n1:cusip>
+		<n1:value>2052</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>40291</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>40291</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Celanese Corp</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>150870103</n1:cusip>
+		<n1:value>335369</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>6041600</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>6041600</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Chase Corporation</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>16150r104</n1:cusip>
+		<n1:value>2556</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>81066</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>81066</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Check Point Software Technolog</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>m22465104</n1:cusip>
+		<n1:value>38272</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>565900</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>565900</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>China Lodging Group Ltd.</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>16949n109</n1:cusip>
+		<n1:value>715</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>29109</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>29109</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Cigna Corp</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>125509109</n1:cusip>
+		<n1:value>53771</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>642200</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>642200</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Citigroup Inc.</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>172967424</n1:cusip>
+		<n1:value>212900</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>4472693</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>4472693</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Comcast Corporation</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>20030n200</n1:cusip>
+		<n1:value>15119</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>310000</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>310000</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Crown Media </n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>228411104</n1:cusip>
+		<n1:value>334</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>86851</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>86851</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Dean Foods Company</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>242370203</n1:cusip>
+		<n1:value>17406</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>1125900</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>1125900</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>DecisionPoint Systems Inc</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>24345a101</n1:cusip>
+		<n1:value>14</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>35165</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>35165</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Delta Airlines Inc</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>247361702</n1:cusip>
+		<n1:value>277799</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>8017300</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>8017300</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Diana Shipping Inc.</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>y2066g104</n1:cusip>
+		<n1:value>30116</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>2511724</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>2511724</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Direct TV Com</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>25490a309</n1:cusip>
+		<n1:value>131381</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>1719200</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>1719200</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Discovery Fincl Svcs</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>254709108</n1:cusip>
+		<n1:value>24545</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>421800</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>421800</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>EZ Corp Inc</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>302301106</n1:cusip>
+		<n1:value>14703</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>1362672</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>1362672</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Eaton Corp PLC</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>g29183103</n1:cusip>
+		<n1:value>57324</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>763100</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>763100</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Ebay</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>278642103</n1:cusip>
+		<n1:value>14252</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>258000</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>258000</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Electronic Arts</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>285512109</n1:cusip>
+		<n1:value>677</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>23320</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>23320</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Emcore Corp</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>290846104</n1:cusip>
+		<n1:value>139</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>27612</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>27612</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Entegris Inc</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>29362u104</n1:cusip>
+		<n1:value>157011</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>12965400</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>12965400</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Entropic Communications Inc</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>29384r105</n1:cusip>
+		<n1:value>76</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>18700</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>18700</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Fairway Group Holdings Corp.</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>30603d109</n1:cusip>
+		<n1:value>3727</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>487802</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>487802</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>First Citizens BancShares, Inc</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>31946m103</n1:cusip>
+		<n1:value>7704</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>32000</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>32000</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>First Solar Inc</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>336433107</n1:cusip>
+		<n1:value>4857</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>69600</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>69600</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Flextronics</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>y2573f102</n1:cusip>
+		<n1:value>107712</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>11657100</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>11657100</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Gasco Energy</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>367220100</n1:cusip>
+		<n1:value>18</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>407200</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>407200</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Google Inc. - Cl C</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>38259p706</n1:cusip>
+		<n1:value>188057</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>168735</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>168735</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Green Dot Corp</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>39304d102</n1:cusip>
+		<n1:value>5185</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>265500</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>265500</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Halliburton Co</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>406216101</n1:cusip>
+		<n1:value>21657</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>367750</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>367750</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Hertz Global Holdings Inc</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>42805t105</n1:cusip>
+		<n1:value>55837</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>2096000</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>2096000</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>JP Morgan Chase &amp; Co</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>46625H100</n1:cusip>
+		<n1:value>119714</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>1971900</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>1971900</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>KKR &amp; Co. L.P.</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>48248m102</n1:cusip>
+		<n1:value>113031</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>4948800</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>4948800</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Knightsbridge Tankers Ltd.</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>g5299g106</n1:cusip>
+		<n1:value>16908</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>1247852</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>1247852</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Kraton Performance Polymers</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>50077c106</n1:cusip>
+		<n1:value>12300</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>470530</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>470530</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Latam Airlines Group S.A.</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>51817r106</n1:cusip>
+		<n1:value>22149</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>1471700</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>1471700</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Luxfer Holdings PLC</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>550678106</n1:cusip>
+		<n1:value>47991</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>2451018</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>2451018</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>LyondellBasell Industries NV</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>n53745100</n1:cusip>
+		<n1:value>61920</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>696200</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>696200</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>MDC Partners Inc.</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>552697104</n1:cusip>
+		<n1:value>49071</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>2150358</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>2150358</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Magnum Hunter Resources Corp</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>55973b102</n1:cusip>
+		<n1:value>599</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>70450</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>70450</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>McClatchy Co Cl A</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>579489105</n1:cusip>
+		<n1:value>2262</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>352369</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>352369</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Meru Networks</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>59047q103</n1:cusip>
+		<n1:value>500</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>110905</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>110905</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Mistras Group, Inc.</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>60649t107</n1:cusip>
+		<n1:value>21915</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>962429</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>962429</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Nutri Systems</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>67069d108</n1:cusip>
+		<n1:value>634</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>42100</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>42100</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Och-Ziff Capital Management Gr</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>67551u105</n1:cusip>
+		<n1:value>5213</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>378600</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>378600</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Oclaro Inc</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>67555n206</n1:cusip>
+		<n1:value>420</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>135400</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>135400</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Oppenheimer Hldgs</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>683797104</n1:cusip>
+		<n1:value>19771</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>704848</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>704848</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Penn Virginia Group</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>707882106</n1:cusip>
+		<n1:value>5139</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>293800</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>293800</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Precision Castparts</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>740189105</n1:cusip>
+		<n1:value>17895</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>70800</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>70800</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Priceline.com Incorporated</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>741503403</n1:cusip>
+		<n1:value>33576</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>28170</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>28170</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>RF Micro Devices </n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>749941100</n1:cusip>
+		<n1:value>1547</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>196293</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>196293</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Rock-Tenn Co</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>772739207</n1:cusip>
+		<n1:value>47804</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>452816</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>452816</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Starwood Hotels &amp; Resorts</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>85590A401</n1:cusip>
+		<n1:value>12561</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>157800</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>157800</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Stereotaxis</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>85916J102</n1:cusip>
+		<n1:value>542</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>127481</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>127481</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Superior Energy Services Inc</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>868157108</n1:cusip>
+		<n1:value>17398</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>565600</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>565600</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>TRW Automotive Holdings Corp</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>87264s106</n1:cusip>
+		<n1:value>184159</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>2256300</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>2256300</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Teradyne Inc</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>880770102</n1:cusip>
+		<n1:value>24451</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>1229300</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>1229300</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>The Hartford Financial Service</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>416515104</n1:cusip>
+		<n1:value>24107</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>683500</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>683500</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>The Marcus Corporation</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>566330106</n1:cusip>
+		<n1:value>19546</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>1170411</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>1170411</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Time Warner Inc</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>887317303</n1:cusip>
+		<n1:value>111754</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>1710613</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>1710613</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Unilife Corp</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>90478e103</n1:cusip>
+		<n1:value>79</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>19298</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>19298</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>United Continental Holdings In</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>910047109</n1:cusip>
+		<n1:value>409022</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>9164730</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>9164730</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Valeant Pharmaceuticals Intern</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>91911k102</n1:cusip>
+		<n1:value>5313</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>40300</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>40300</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Vision Sciences Inc. Delaware</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>927912105</n1:cusip>
+		<n1:value>92</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>76800</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>76800</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Walgreen</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>931422109</n1:cusip>
+		<n1:value>5507</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>83400</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>83400</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Whiting Petroleum Corp</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>966387102</n1:cusip>
+		<n1:value>149411</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>2153200</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>2153200</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+	<n1:infoTable>
+		<n1:nameOfIssuer>Yahoo</n1:nameOfIssuer>
+		<n1:titleOfClass>COM</n1:titleOfClass>
+		<n1:cusip>984332106</n1:cusip>
+		<n1:value>55153</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>1536300</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>1536300</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+</n1:informationTable>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

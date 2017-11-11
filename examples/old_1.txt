@@ -1,0 +1,169 @@
+<SEC-DOCUMENT>0001092838-12-000004.txt : 20120514
+<SEC-HEADER>0001092838-12-000004.hdr.sgml : 20120514
+<ACCEPTANCE-DATETIME>20120514142711
+ACCESSION NUMBER:		0001092838-12-000004
+CONFORMED SUBMISSION TYPE:	13F-HR
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20120331
+FILED AS OF DATE:		20120514
+DATE AS OF CHANGE:		20120514
+EFFECTIVENESS DATE:		20120514
+
+FILER:
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			INTREPID CAPITAL MANAGEMENT INC
+		CENTRAL INDEX KEY:			0001092838
+		IRS NUMBER:				593274026
+		STATE OF INCORPORATION:			FL
+		FISCAL YEAR END:			1231
+
+	FILING VALUES:
+		FORM TYPE:		13F-HR
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	028-10510
+		FILM NUMBER:		12838053
+
+	BUSINESS ADDRESS:	
+		STREET 1:		1400 MARSH LANDING PARKWAY
+		STREET 2:		SUITE 106
+		CITY:			JACKSONVILLE BEACH
+		STATE:			FL
+		ZIP:			32250
+		BUSINESS PHONE:		9042463433
+
+	MAIL ADDRESS:	
+		STREET 1:		1400 MARSH LANDING PARKWAY
+		STREET 2:		SUITE 106
+		CITY:			JACKSONVILLE BEACH
+		STATE:			FL
+		ZIP:			32250
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>13F-HR
+<SEQUENCE>1
+<FILENAME>sec13f03312012.txt
+<DESCRIPTION>INTREPID CAPITAL MANAGEMENT 13F 3/31/2012
+<TEXT>
+                             UNITED STATES
+		  SECURITIES AND EXCHANGE COMMISSION
+		       Washington, D.C. 20549
+
+			      FORM 13F
+
+			 FORM 13F COVER PAGE
+
+Report for the Calendar Year or Quarter Ended: March 31, 2012
+
+Check here if Amendment [ ]; Amendment Number:
+This Amendment (Check only one): [x] is a restatement.
+				 [ ] add new holdings entries.
+
+Institutional Investment Manager Filing this Report:
+Name: 	 Intrepid Capital Management, Inc.
+Address: 1400 Marsh Landing Pkwy
+	 Suite 106
+	 Jacksonville Beach, FL 32250
+
+13F File Number:  28-10510
+
+The institutional investment manager filing this report and the person by whom
+it is signed hereby represent that the person signing the report is authorized
+to submit it, that all information contained herein is true, correct and
+complete, and that it is understood that all required items,statements,
+schedules, lists, and tables, are considered integral parts of this form.
+
+Person Signing this Report on Behalf of Reporting Manager:
+
+Name: 	Samuel Solem
+Title:	Trader
+Phone: 	904-242-5120
+
+Signature, Place and Date of Signing:
+
+Samuel Solem,  	Jacksonville Beach, Florida 	May 14, 2012
+
+Report type (Check only one):
+
+[X] 13F HOLDINGS REPORT
+[ ] 13F NOTICE
+[ ] 13F COMBINATION REPORT
+
+List of Other Managers Reporting for this Manager: None
+
+<PAGE>
+
+		      FORM 13F SUMMARY PAGE
+
+Report Summary:
+
+Number of other included Managers: 0
+Form 13F information table entry total:	51
+Form 13F information table value total: 701,378 (in thousands)
+List of Other Included Managers: 0
+
+<PAGE>
+<TABLE>
+                                                                  FORM 13F INFORMATION TABLE
+
+                                                           VALUE   SHARES/  SH/ PUT/ INVSTMT    OTHER          VOTING AUTHORITY
+        NAME OF ISSUER          TITLE OF CLASS    CUSIP   (x$1000) PRN AMT  PRN CALL DSCRETN   MANAGERS     SOLE    SHARED    NONE
+------------------------------ ---------------- --------- -------- -------- --- ---- ------- ------------ -------- -------- --------
+<S>                            <C>              <C>       <C>      <C>      <C> <C>  <C>     <C>          <C>      <C>      <C>
+AARONS INC COM PAR $0.50       CS               002535300    10070   388790 SH       Sole                   388790
+AMDOCS LTD ORD                 CS               G02602103     3585   113520 SH       Sole                   113520
+AMERICAN GREETINGS CORP CL A   CS               026375105    26036  1697292 SH       Sole                  1697292
+AMERISAFE INC COM              CS               03071H100    19784   799692 SH       Sole                   799692
+ASPEN INSURANCE HOLDINGS LTD S CS               G05384105    28353  1014778 SH       Sole                  1014778
+BALDWIN & LYONS INC CL B       CS               057755209     9542   426354 SH       Sole                   426354
+BANK OF NEW YORK MELLON CORP C CS               064058100    14003   580335 SH       Sole                   580335
+BARD C R INC COM               CS               067383109     1421    14395 SH       Sole                    14395
+BARRETT BILL CORP COM          CS               06846N104    35530  1366004 SH       Sole                  1366004
+BERKSHIRE HATHAWAY INC DEL CL  CS               084670702    13011   160335 SH       Sole                   160335
+BIO RAD LABS INC CL A          CS               090572207    37804   364590 SH       Sole                   364590
+BROWN & BROWN INC COM          CS               115236101    11568   486440 SH       Sole                   486440
+CENTRAL GARDEN & PET CO CL A N CS               153527205     5588   580247 SH       Sole                   580247
+CENTRAL GARDEN & PET CO COM    CS               153527106      329    35000 SH       Sole                    35000
+COMPUTER SCIENCES CORP COM     CS               205363104    17255   576330 SH       Sole                   576330
+CONVERGYS CORP COM             CS               212485106     9430   706341 SH       Sole                   706341
+CORE MARK HOLDING CO INC COM   CS               218681104     9343   228221 SH       Sole                   228221
+CORELOGIC INC COM              CS               21871D103    28156  1725227 SH       Sole                  1725227
+COTT CORP QUE COM              CS               22163N106    18665  2832307 SH       Sole                  2832307
+CSG SYS INTL INC COM           CS               126349109    35134  2320607 SH       Sole                  2320607
+DELL INC COM                   CS               24702R101    12209   735680 SH       Sole                   735680
+DOVER MOTORSPORTS INC COM      CS               260174107      274   184800 SH       Sole                   184800
+DST SYS INC DEL COM            CS               233326107     1161    21407 SH       Sole                    21407
+EPIQ SYS INC COM               CS               26882D109    26263  2170475 SH       Sole                  2170475
+FEDERATED INVS INC PA CL B     CS               314211103    17001   758654 SH       Sole                   758654
+GENCOR INDS INC COM            CS               368678108      455    65000 SH       Sole                    65000
+GLOBAL PMTS INC COM            CS               37940X102     7324   154189 SH       Sole                   154189
+ICON PUB LTD CO SPONSORED ADR  CS               45103T107    11849   558376 SH       Sole                   558376
+INGRAM MICRO INC CL A          CS               457153104     9257   498775 SH       Sole                   498775
+INTERNATIONAL SPEEDWAY CORP CL CS               460335201    10110   364324 SH       Sole                   364324
+JACKSONVILLE BANCORP INC FLA C CS               469249106       69    19484 SH       Sole                    19484
+JOHNSON & JOHNSON COM          CS               478160104    10706   162315 SH       Sole                   162315
+MANTECH INTL CORP CL A         CS               564563104    28831   836658 SH       Sole                   836658
+MICROSOFT CORP COM             CS               594918104    13454   417100 SH       Sole                   417100
+MOLSON COORS BREWING CO CL B   CS               60871R209    12881   284665 SH       Sole                   284665
+NEWMONT MINING CORP COM        CS               651639106    13157   256620 SH       Sole                   256620
+OIL DRI CORP AMER COM          CS               677864100     6002   281921 SH       Sole                   281921
+PAN AMERICAN SILVER CORP COM   CS               697900108    15637   708825 SH       Sole                   708825
+PATRIOT TRANSN HLDG INC COM    CS               70337B102      454    19500 SH       Sole                    19500
+POTLATCH CORP NEW COM          CS               737630103    28032   894452 SH       Sole                   894452
+RAYONIER INC COM               CS               754907103      336     7629 SH       Sole                     7629
+REGIS CORP MINN COM            CS               758932107    25206  1367661 SH       Sole                  1367661
+ROYAL GOLD INC COM             CS               780287108     5804    88990 SH       Sole                    88990
+SAIC INC COM                   CS               78390X101      692    52400 SH       Sole                    52400
+SPEEDWAY MOTORSPORTS INC COM   CS               847788106    25057  1341405 SH       Sole                  1341405
+TELEFLEX INC COM               CS               879369106    18504   302602 SH       Sole                   302602
+TELEPHONE & DATA SYS INC COM N CS               879433829    16003   691279 SH       Sole                   691279
+TELLABS INC COM                CS               879664100    18656  4606530 SH       Sole                  4606530
+TRAVELERS COMPANIES INC COM    CS               89417E109     8934   150908 SH       Sole                   150908
+WORLD WRESTLING ENTMT INC CL A CS               98156Q108    22118  2493578 SH       Sole                  2493578
+ASPEN INSURANCE HOLDINGS LTD P PS               G05384139      335    13000 SH       Sole                    13000
+Report Summary                     51 records                701,378 (in thousands)
+
+</TABLE>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>
