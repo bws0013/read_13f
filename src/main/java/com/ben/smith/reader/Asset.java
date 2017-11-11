@@ -39,6 +39,8 @@ public class Asset {
     }
 
     public void print_all_fields() {
+        System.out.printf("cik: %s\n", cik);
+        System.out.printf("confirmation_period: %s\n", confirmation_period);
         System.out.printf("name: %s\n", name);
         System.out.printf("title: %s\n", title);
         System.out.printf("cusip: %s\n", cusip);

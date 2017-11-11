@@ -17,34 +17,78 @@ public class read_unknown_file {
     public static void main(String[] args) {
 
         String filename = "./storage/old_1.txt";
-        List<String> file_text = read_file(filename);
-        String file_type = determine_file_type(file_text);
+        List<Asset> assets = pass_to_processors(filename);
 
-        pass_to_processors(file_type, filename);
-
-        if (true == true) return;
-
-        file_text = read_file("./storage/new_1.txt");
-        document_header_getter(file_text);
-        xml_type_getter(file_text);
-
-        file_text = read_file("./storage/new_2.txt");
-        xml_type_getter(file_text);
-
-        file_text = read_file("./storage/new_3.txt");
-        xml_type_getter(file_text);
-
-    }
-
-
-    public static void pass_to_processors(String file_type, String filename) {
-
-        if(file_type.equals("old_1")) {
-            List<Asset> assets = file_processor_old.get_assets(filename);
+        for(Asset a : assets) {
+            a.print_all_fields();
         }
 
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
+
+        filename = "./storage/new_1.txt";
+        assets = pass_to_processors(filename);
+
+        for(Asset a : assets) {
+            a.print_all_fields();
+        }
+
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
+
+        filename = "./storage/new_2.txt";
+        assets = pass_to_processors(filename);
+
+        for(Asset a : assets) {
+            a.print_all_fields();
+        }
+
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
+
+        filename = "./storage/new_3.txt";
+        assets = pass_to_processors(filename);
+
+        for(Asset a : assets) {
+            a.print_all_fields();
+        }
     }
 
+    public static List<Asset> pass_to_processors(String filename) {
+        List<Asset> assets = null;
+
+        String file_type = determine_file_type(filename);
+        if (file_type.equals("#")) {
+            System.out.println("File type unknown!");
+            System.exit(1);
+        } if (file_type.equals("old_1")) {
+            assets = file_processor_old.get_assets(filename);
+            assets = add_asset_headers(assets, filename);
+        } else {
+            assets = file_processor_new.get_assets(filename, file_type);
+            assets = add_asset_headers(assets, filename);
+        }
+
+        return assets;
+
+    }
+
+    public static List<Asset> add_asset_headers(List<Asset> assets, String filename) {
+
+        List<String> file_text = read_file(filename);
+        String[] header = document_header_getter(file_text);
+
+        List<Asset> assets_fixed = new ArrayList<>();
+
+        for(Asset a : assets) {
+            a.add_identifying_info(header[0], header[1]);
+            assets_fixed.add(a);
+        }
+
+        return assets_fixed;
+    }
+
+    public static String determine_file_type(String filename) {
+        List<String> text_lines = read_file(filename);
+        return determine_file_type(text_lines);
+    }
 
     // Used for determining what we will need to read the document with
     public static String determine_file_type(List<String> text_lines) {
@@ -111,7 +155,7 @@ public class read_unknown_file {
 
 
     // Get the cik and the CONFORMED PERIOD OF REPORT from a 13f
-    public static void document_header_getter(List<String> text_lines) {
+    public static String[] document_header_getter(List<String> text_lines) {
         text_lines = text_lines.subList(0, 20);
         for(int i = 0; i < text_lines.size(); i++) {
             text_lines.set(i, text_lines.get(i).replaceAll("\\s+",""));
@@ -129,7 +173,7 @@ public class read_unknown_file {
             }
         }
 
-        System.out.printf("cik: %s, report period: %s\n", cik, report_period);
+        return new String[]{cik, report_period};
     }
 
 
