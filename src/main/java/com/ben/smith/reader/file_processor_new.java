@@ -21,15 +21,23 @@ public class file_processor_new {
     public static void main(String[] args) {
 
         String filename = "./storage/new_1.txt";
+        String addition = "";
 
-        List<String> lines = get_valuable_lines(filename);
+        List<Asset> assets = get_assets(filename, addition);
 
-        build_xml_document(lines);
-
+        for(Asset a : assets) {
+            a.print_all_fields();
+        }
 
     }
 
-    public static void build_xml_document(List<String> xml_lines) {
+    public static List<Asset> get_assets(String filename, String addition) {
+        List<String> lines = get_valuable_lines(filename);
+        NodeList nodes = get_node_list(lines, addition);
+        return get_asset_list(nodes);
+    }
+
+    public static NodeList get_node_list(List<String> xml_lines, String addition) {
         StringBuilder sb = new StringBuilder();
 
         for(String line : xml_lines) { sb.append(line); }
@@ -42,16 +50,11 @@ public class file_processor_new {
 
             Document doc = db.parse(is);
 
-            NodeList nodeList = doc.getElementsByTagName("infoTable");
-
-            System.out.println(nodeList.getLength());
-
-            Node n = nodeList.item(0);
-            NamedNodeMap map = n.getAttributes();
-
-            for(int i = 0; i < map.getLength(); i++) {
-                System.out.println(map.item(i));
+            if(!addition.equals("")) {
+                addition = addition + ":";
             }
+            NodeList nodeList = doc.getElementsByTagName(addition + "infoTable");
+            return nodeList;
 
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
@@ -61,6 +64,44 @@ public class file_processor_new {
             e.printStackTrace();
         }
 
+        return null;
+    }
+
+    public static List<Asset> get_asset_list(NodeList nodes) {
+
+        List<Asset> assets = new ArrayList<>();
+
+        String name;
+        String title;
+        String cusip;
+        String cash_value;
+        String num_shares;
+        String type;
+        String discretion;
+
+        for(int i = 0; i < nodes.getLength(); i++) {
+            Node node = nodes.item(i);
+
+            NodeList nl = node.getChildNodes();
+
+            // System.out.println(nl.getLength());
+
+            String[] num_shares_and_type = nl.item(9).getTextContent()
+                    .trim().replaceAll("\\s+"," ").split(" ");
+
+            name = nl.item(1).getTextContent();
+            title = nl.item(3).getTextContent();
+            cusip = nl.item(5).getTextContent().toUpperCase();
+            cash_value = nl.item(7).getTextContent();
+            num_shares = num_shares_and_type[0];
+            type = num_shares_and_type[1];
+            discretion = nl.item(11).getTextContent();
+
+            Asset a = new Asset(name, title, cusip, cash_value, num_shares, type, discretion);
+            assets.add(a);
+        }
+
+        return assets;
     }
 
 

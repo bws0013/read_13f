@@ -57,7 +57,7 @@ class file_processor_old {
 
 //            name = name;
             title = elements_we_care_about.get(cusip_index - 1);
-//            cusip = cusip;
+            cusip = cusip.toUpperCase();
             cash_value = elements_we_care_about.get(cusip_index + 1);
             num_shares = elements_we_care_about.get(cusip_index + 2);
             type = elements_we_care_about.get(cusip_index + 3);
