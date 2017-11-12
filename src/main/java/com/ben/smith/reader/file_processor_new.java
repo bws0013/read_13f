@@ -15,6 +15,7 @@ import org.xml.sax.SAXException;
 
 /**
  * Created by bensmith on 11/11/17.
+ * Used for getting lists of assets to be passed to a sql database later
  */
 public class file_processor_new {
 
@@ -31,13 +32,13 @@ public class file_processor_new {
 
     }
 
-    public static List<Asset> get_assets(String filename, String addition) {
+    static List<Asset> get_assets(String filename, String addition) {
         List<String> lines = get_valuable_lines(filename);
         NodeList nodes = get_node_list(lines, addition);
         return get_asset_list(nodes);
     }
 
-    public static NodeList get_node_list(List<String> xml_lines, String addition) {
+    private static NodeList get_node_list(List<String> xml_lines, String addition) {
         StringBuilder sb = new StringBuilder();
 
         for(String line : xml_lines) { sb.append(line); }
@@ -53,21 +54,16 @@ public class file_processor_new {
             if(!addition.equals("")) {
                 addition = addition + ":";
             }
-            NodeList nodeList = doc.getElementsByTagName(addition + "infoTable");
-            return nodeList;
+            return doc.getElementsByTagName(addition + "infoTable");
 
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
+        } catch (ParserConfigurationException | IOException | SAXException e) {
             e.printStackTrace();
         }
 
         return null;
     }
 
-    public static List<Asset> get_asset_list(NodeList nodes) {
+    private static List<Asset> get_asset_list(NodeList nodes) {
 
         List<Asset> assets = new ArrayList<>();
 
@@ -105,7 +101,7 @@ public class file_processor_new {
     }
 
 
-    public static List<String> get_valuable_lines(String filename) {
+    private static List<String> get_valuable_lines(String filename) {
 
         List<String> valuable_lines = new ArrayList<>();
 
@@ -116,27 +112,12 @@ public class file_processor_new {
         for(int i = 0; i < text_lines.size(); i++) {
 
             String line = text_lines.get(i).replaceAll("\\s+","");
-            if(line.equals("<XML>") && seen_xml_before == true) {
+            if(line.equals("<XML>") && seen_xml_before) {
                 valuable_lines = text_lines.subList(i + 1, text_lines.size() - 4);
             }
-            if(line.equals("<XML>")) {
-                seen_xml_before = true;
-            }
+            if(line.equals("<XML>")) seen_xml_before = true;
         }
 
         return valuable_lines;
     }
-
-
-    public static List<String> read_new_1(String filename) {
-
-
-
-
-        return null;
-    }
-
-
-
-
 }

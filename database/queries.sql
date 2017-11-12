@@ -1,0 +1,4 @@
+select count(*) from Assets;
+
+insert into Assets values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+

@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * Created by bensmith on 11/4/17.
+ * Main file for reading stuff
  */
 public class read_unknown_file {
 
@@ -19,39 +20,45 @@ public class read_unknown_file {
         String filename = "./storage/old_1.txt";
         List<Asset> assets = pass_to_processors(filename);
 
-        for(Asset a : assets) {
-            a.print_all_fields();
-        }
+        String db_name = "jdbc:sqlite:./database/test.db";
 
-        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
-
+        database_layer.add_date(db_name, assets);
+//        for(Asset a : assets) {
+//            a.print_all_fields();
+//        }
+//
+//        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
+//
         filename = "./storage/new_1.txt";
         assets = pass_to_processors(filename);
-
-        for(Asset a : assets) {
-            a.print_all_fields();
-        }
-
-        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
-
+        database_layer.add_date(db_name, assets);
+//
+//        for(Asset a : assets) {
+//            a.print_all_fields();
+//        }
+//
+//        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
+//
         filename = "./storage/new_2.txt";
         assets = pass_to_processors(filename);
-
-        for(Asset a : assets) {
-            a.print_all_fields();
-        }
-
-        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
-
+        database_layer.add_date(db_name, assets);
+//
+//        for(Asset a : assets) {
+//            a.print_all_fields();
+//        }
+//
+//        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
+//
         filename = "./storage/new_3.txt";
         assets = pass_to_processors(filename);
-
-        for(Asset a : assets) {
-            a.print_all_fields();
-        }
+        database_layer.add_date(db_name, assets);
+//
+//        for(Asset a : assets) {
+//            a.print_all_fields();
+//        }
     }
 
-    public static List<Asset> pass_to_processors(String filename) {
+    private static List<Asset> pass_to_processors(String filename) {
         List<Asset> assets = null;
 
         String file_type = determine_file_type(filename);
@@ -70,7 +77,7 @@ public class read_unknown_file {
 
     }
 
-    public static List<Asset> add_asset_headers(List<Asset> assets, String filename) {
+    private static List<Asset> add_asset_headers(List<Asset> assets, String filename) {
 
         List<String> file_text = read_file(filename);
         String[] header = document_header_getter(file_text);
@@ -85,13 +92,13 @@ public class read_unknown_file {
         return assets_fixed;
     }
 
-    public static String determine_file_type(String filename) {
+    private static String determine_file_type(String filename) {
         List<String> text_lines = read_file(filename);
         return determine_file_type(text_lines);
     }
 
     // Used for determining what we will need to read the document with
-    public static String determine_file_type(List<String> text_lines) {
+    static String determine_file_type(List<String> text_lines) {
 
         // Check for old_1
         for(String line : text_lines) {
@@ -105,7 +112,7 @@ public class read_unknown_file {
     }
 
     // Read a file into a string list
-    public static List<String> read_file(String filename) {
+    static List<String> read_file(String filename) {
         List<String> text_lines = new ArrayList<String>();
 
         try {
@@ -127,7 +134,7 @@ public class read_unknown_file {
     }
 
     // Get the type xml variant used in the 13f
-    public static String xml_type_getter(List<String> text_lines) {
+    private static String xml_type_getter(List<String> text_lines) {
         int text_lines_length = text_lines.size();
         text_lines = text_lines.subList(text_lines_length - 10, text_lines_length);
         for(int i = 0; i < text_lines.size(); i++) {
@@ -155,7 +162,7 @@ public class read_unknown_file {
 
 
     // Get the cik and the CONFORMED PERIOD OF REPORT from a 13f
-    public static String[] document_header_getter(List<String> text_lines) {
+    private static String[] document_header_getter(List<String> text_lines) {
         text_lines = text_lines.subList(0, 20);
         for(int i = 0; i < text_lines.size(); i++) {
             text_lines.set(i, text_lines.get(i).replaceAll("\\s+",""));

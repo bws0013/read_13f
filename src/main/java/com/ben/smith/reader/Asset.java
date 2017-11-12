@@ -35,7 +35,16 @@ public class Asset {
 
     public void add_identifying_info(String cik, String confirmation_period) {
         this.cik = cik;
-        this.confirmation_period = confirmation_period;
+        this.confirmation_period = fix_date(confirmation_period);
+    }
+
+    // 20170630
+    public String fix_date(String bad_date) {
+
+        String good_date = bad_date.substring(0, 4) + "-";
+        good_date += bad_date.substring(4, 6) + "-";
+        good_date += bad_date.substring(6);
+        return good_date;
     }
 
     public void print_all_fields() {
