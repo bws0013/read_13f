@@ -1,8 +1,11 @@
 package com.ben.smith.reader;
 
 import java.io.*;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by bensmith on 11/4/17.
@@ -15,47 +18,59 @@ public class read_unknown_file {
         of 13f's into a database.
     */
 
+    public static String db_name = "jdbc:sqlite:./database/test.db";
+
     public static void main(String[] args) {
 
-        String filename = "./storage/old_1.txt";
+        List<String> filenames = new ArrayList<>();
+        filenames.add("./storage/old_1.txt");
+        filenames.add("./storage/new_1.txt");
+        filenames.add("./storage/new_2.txt");
+        filenames.add("./storage/new_3.txt");
+
+        add_to_database(filenames);
+
+    }
+
+    public static void add_to_database(List<String> filenames) {
+        for(String filename : filenames) {
+            add_to_database(filename);
+        }
+    }
+
+    public static void add_to_database(String filename) {
+        Map<String, Set<String>> cik_to_conf_period = database_layer.get_added_files(db_name);
+
+//        List<String> ks = new ArrayList<>();
+//        ks.addAll(cik_to_conf_period.keySet());
+//
+//        for(String k : ks) {
+//            List<String> conf_periods = new ArrayList<>();
+//            conf_periods.addAll(cik_to_conf_period.get(k));
+//            System.out.println(k);
+//            for(String c : conf_periods) {
+//                System.out.print(c + " ");
+//            }
+//            System.out.println();
+//        }
+
         List<Asset> assets = pass_to_processors(filename);
+        if(assets.size() == 0) return;
 
-        String db_name = "jdbc:sqlite:./database/test.db";
+        String cik = assets.get(0).getCik();
+        String conf_period = assets.get(0).getConfirmation_period();
 
-        database_layer.add_date(db_name, assets);
-//        for(Asset a : assets) {
-//            a.print_all_fields();
-//        }
-//
-//        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
-//
-        filename = "./storage/new_1.txt";
+        if(cik_to_conf_period.containsKey(cik)) {
+            Set<String> conf_periods = cik_to_conf_period.get(cik);
+            if(conf_periods.contains(conf_period)) {
+                System.out.println("not added");
+                return;
+            }
+        }
+
         assets = pass_to_processors(filename);
         database_layer.add_date(db_name, assets);
-//
-//        for(Asset a : assets) {
-//            a.print_all_fields();
-//        }
-//
-//        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
-//
-        filename = "./storage/new_2.txt";
-        assets = pass_to_processors(filename);
-        database_layer.add_date(db_name, assets);
-//
-//        for(Asset a : assets) {
-//            a.print_all_fields();
-//        }
-//
-//        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
-//
-        filename = "./storage/new_3.txt";
-        assets = pass_to_processors(filename);
-        database_layer.add_date(db_name, assets);
-//
-//        for(Asset a : assets) {
-//            a.print_all_fields();
-//        }
+        System.out.println("added");
     }
 
     private static List<Asset> pass_to_processors(String filename) {
