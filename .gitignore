@@ -80,3 +80,4 @@ crashlytics-build.properties
 fabric.properties
 src/main/resources/
 target/
+output_for_csvs/

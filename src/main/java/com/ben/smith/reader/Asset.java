@@ -25,7 +25,7 @@ public class Asset {
         this.cash_value = cash_value;
         this.num_shares = num_shares;
         this.type = type;
-        this.discretion = discretion;
+        this.discretion = discretion.toUpperCase();
     }
 
 
@@ -45,6 +45,21 @@ public class Asset {
         good_date += bad_date.substring(4, 6) + "-";
         good_date += bad_date.substring(6);
         return good_date;
+    }
+
+    public String get_csv_line() {
+        String line = "";
+        line += "\"" + cik + "\",";
+        line += "\"" + confirmation_period + "\",";
+        line += "\"" + name + "\",";
+        line += "\"" + title + "\",";
+        line += "\"" + cusip + "\",";
+        line += "\"" + excel_cusip + "\",";
+        line += "\"" + cash_value + "\",";
+        line += "\"" + num_shares + "\",";
+        line += "\"" + type + "\",";
+        line += "\"" + discretion + "\"";
+        return line;
     }
 
     public void print_all_fields() {

@@ -41,19 +41,6 @@ public class read_unknown_file {
     public static void add_to_database(String filename) {
         Map<String, Set<String>> cik_to_conf_period = database_layer.get_added_files(db_name);
 
-//        List<String> ks = new ArrayList<>();
-//        ks.addAll(cik_to_conf_period.keySet());
-//
-//        for(String k : ks) {
-//            List<String> conf_periods = new ArrayList<>();
-//            conf_periods.addAll(cik_to_conf_period.get(k));
-//            System.out.println(k);
-//            for(String c : conf_periods) {
-//                System.out.print(c + " ");
-//            }
-//            System.out.println();
-//        }
-
         List<Asset> assets = pass_to_processors(filename);
         if(assets.size() == 0) return;
 
@@ -73,7 +60,7 @@ public class read_unknown_file {
         System.out.println("added");
     }
 
-    private static List<Asset> pass_to_processors(String filename) {
+    public static List<Asset> pass_to_processors(String filename) {
         List<Asset> assets = null;
 
         String file_type = determine_file_type(filename);
