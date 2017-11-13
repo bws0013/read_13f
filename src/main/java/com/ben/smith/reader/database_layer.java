@@ -1,11 +1,11 @@
 package com.ben.smith.reader;
 
 import java.sql.*;
-import java.sql.Date;
 import java.util.*;
 
 /**
  * Created by bensmith on 11/11/17.
+ * This file handles any db stuff we will deal with in the program
  */
 public class database_layer {
 
@@ -69,6 +69,7 @@ public class database_layer {
 
     }
 
+    // Collect the info to know if we have previously read this 13f
     public static Map<String, Set<String>> get_added_files(String db_name) {
 
         Map<String, Set<String>> cik_to_conf_period = new HashMap<>();
@@ -83,30 +84,37 @@ public class database_layer {
                     ResultSet.TYPE_FORWARD_ONLY,
                     ResultSet.CONCUR_READ_ONLY);
 
+            // A particular filing is identifiable using a cik and confirmation period
             ResultSet rs = stmt.executeQuery("select distinct cik, confirmation_period from assets;");
 
             while (rs.next()) {
                 String cik = rs.getString("cik");
                 String conf_period = rs.getString("confirmation_period");
 
+                // Convert the time stored on the db (milliseconds) and convert to yyyy-mm-dd
                 Calendar calendar = Calendar.getInstance();
                 calendar.setTimeInMillis(Long.parseLong(conf_period));
 
                 int mYear = calendar.get(Calendar.YEAR);
-                int mMonth = calendar.get(Calendar.MONTH) + 1;
+                int mMonth = calendar.get(Calendar.MONTH) + 1; // Month starts at 0 -> Jan
                 int mDay = calendar.get(Calendar.DAY_OF_MONTH);
 
+                // Change month so that it is always mm instead of m
                 String month = Integer.toString(mMonth);
                 if(mMonth < 10) {
                     month = "0" + month;
                 }
+
+                // Change day so that it is always dd instead of d
                 String day = Integer.toString(mDay);
                 if(mDay < 10) {
                     day = "0" + day;
                 }
 
+                // Combine the date into yyyy-mm-dd
                 conf_period = mYear + "-" + month + "-" + day;
 
+                // Add all of the confirmation periods we have seen to their associated keys
                 if(cik_to_conf_period.containsKey(cik)) {
                     Set<String> conf_periods = cik_to_conf_period.get(cik);
                     conf_periods.add(conf_period);
@@ -129,14 +137,16 @@ public class database_layer {
                 System.out.println(ex.getMessage());
             }
         }
+
+        // Return our confirmation periods mapped to their respective ciks
         return cik_to_conf_period;
     }
 
+    // Testing if we can connect to the database, copied from the internet
     public static void connect(String db_name) {
         Connection conn = null;
         try {
-            // db parameters
-            // String url = "jdbc:sqlite:C:/sqlite/db/chinook.db";
+
             String url = db_name;
             // create a connection to the database
             conn = DriverManager.getConnection(url);

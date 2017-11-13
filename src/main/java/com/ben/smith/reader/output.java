@@ -1,13 +1,15 @@
 package com.ben.smith.reader;
 
-import javafx.beans.binding.StringBinding;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by bensmith on 11/13/17.
+ *
+ * Outputting as csv and json (maybe) will be here.
+ * Later on I will see about adding the ability to export the data in individual files,
+ * instead of all the output going to a single file, but just use excel to figure that out
  */
 public class output {
 
@@ -24,6 +26,7 @@ public class output {
         create_csv_from_multiple_files(files_to_csvify, output_file);
     }
 
+    // Create a single csv file containing info from all the individual 13f filings.
     public static void create_csv_from_multiple_files(List<String> filenames, String output_file_name) {
         for(String filename : filenames) {
             List<Asset> assets = read_unknown_file.pass_to_processors(filename);
@@ -31,6 +34,7 @@ public class output {
         }
     }
 
+    // Get the headers for our csv file, only add them if the file doesnt already exist
     public static String get_headers() {
         String line = "";
         line += "\"cik\",";
@@ -46,6 +50,7 @@ public class output {
         return line;
     }
 
+    // Add all of our assets to a csv file that we output
     public static void print_to_csv(String output_filename, List<Asset> assets) {
 
         StringBuilder sb;

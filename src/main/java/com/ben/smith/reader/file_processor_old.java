@@ -55,7 +55,6 @@ class file_processor_old {
                 name += name_element + " ";
             }
 
-//            name = name;
             title = elements_we_care_about.get(cusip_index - 1);
             cusip = cusip.toUpperCase();
             cash_value = elements_we_care_about.get(cusip_index + 1);
@@ -114,7 +113,7 @@ class file_processor_old {
         return offset_with_highest_count;
     }
 
-
+    // Read the old filing type and get the relevant lines from it
     private List<String> read_old_1(String filename) {
 
         List<String> text_lines = read_unknown_file.read_file(filename);
@@ -135,15 +134,17 @@ class file_processor_old {
         return lines_we_care_about;
     }
 
+    // Get a list of the locations of cusip location candidates for analysis later
     private List<Integer> regex_offset(String line) {
 
         List<Integer> found_offsets = new ArrayList<>();
 
+        // Cusips are 9 characters and can contain numbers and letters
         String pattern = "[A-Za-z0-9]{9}";
         Pattern finder = Pattern.compile(pattern);
         Matcher matcher = finder.matcher(line);
 
-
+        // Every candidate gets added to the list
         while (matcher.find()) {
             found_offsets.add(matcher.start());
         }

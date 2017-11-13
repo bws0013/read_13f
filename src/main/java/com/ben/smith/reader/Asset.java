@@ -2,6 +2,7 @@ package com.ben.smith.reader;
 
 /**
  * Created by bensmith on 11/7/17.
+ * This is our asset object which holds the crucial info from our 13f filings
  */
 public class Asset {
 
@@ -17,6 +18,7 @@ public class Asset {
     public String type;
     public String discretion;
 
+    // The only constructor we should need, we add the cik and confirmation_period later
     public Asset(String name, String title, String cusip, String cash_value, String num_shares, String type, String discretion) {
         this.name = name;
         this.title = title;
@@ -28,25 +30,21 @@ public class Asset {
         this.discretion = discretion.toUpperCase();
     }
 
-
-    public Asset(String line) {
-
-    }
-
+    // Add the cik and confirmation_period of the asset to this asset object
     public void add_identifying_info(String cik, String confirmation_period) {
         this.cik = cik;
         this.confirmation_period = fix_date(confirmation_period);
     }
 
-    // 20170630
+    // 20170630 -> 2017-06-30, fix the date so that it conforms to yyyy-mm-dd
     public String fix_date(String bad_date) {
-
         String good_date = bad_date.substring(0, 4) + "-";
         good_date += bad_date.substring(4, 6) + "-";
         good_date += bad_date.substring(6);
         return good_date;
     }
 
+    // Used to form the assets data into a line to insert into a csv
     public String get_csv_line() {
         String line = "";
         line += "\"" + cik + "\",";
@@ -62,6 +60,7 @@ public class Asset {
         return line;
     }
 
+    // Used mainly for debugging to check that all of the values of the asset are correct
     public void print_all_fields() {
         System.out.printf("cik: %s\n", cik);
         System.out.printf("confirmation_period: %s\n", confirmation_period);
@@ -75,6 +74,12 @@ public class Asset {
         System.out.printf("discretion: %s\n", discretion);
         System.out.println("==============================");
     }
+
+    /*
+    *
+    * Boilerplate getters/setters below, no need to go into those
+    *
+    */
 
     public String getName() {
         return name;

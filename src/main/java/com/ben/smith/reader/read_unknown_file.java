@@ -1,7 +1,6 @@
 package com.ben.smith.reader;
 
 import java.io.*;
-import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -32,12 +31,14 @@ public class read_unknown_file {
 
     }
 
+    // Add several files to our database
     public static void add_to_database(List<String> filenames) {
         for(String filename : filenames) {
             add_to_database(filename);
         }
     }
 
+    // Add all of the data from a file to our database
     public static void add_to_database(String filename) {
         Map<String, Set<String>> cik_to_conf_period = database_layer.get_added_files(db_name);
 
@@ -60,6 +61,7 @@ public class read_unknown_file {
         System.out.println("added");
     }
 
+    // Determine which file processor we need to pass our file to and get the assets from that file
     public static List<Asset> pass_to_processors(String filename) {
         List<Asset> assets = null;
 
@@ -67,7 +69,7 @@ public class read_unknown_file {
         if (file_type.equals("#")) {
             System.out.println("File type unknown!");
             System.exit(1);
-        } if (file_type.equals("old_1")) {
+        } else if (file_type.equals("old_1")) {
             assets = file_processor_old.get_assets(filename);
             assets = add_asset_headers(assets, filename);
         } else {
@@ -79,6 +81,7 @@ public class read_unknown_file {
 
     }
 
+    // Add the cik and confirmation period to all of the assets
     private static List<Asset> add_asset_headers(List<Asset> assets, String filename) {
 
         List<String> file_text = read_file(filename);
@@ -94,6 +97,7 @@ public class read_unknown_file {
         return assets_fixed;
     }
 
+    // Read a file and get if it is old or new and what type of new it is
     private static String determine_file_type(String filename) {
         List<String> text_lines = read_file(filename);
         return determine_file_type(text_lines);

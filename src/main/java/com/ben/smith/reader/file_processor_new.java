@@ -32,12 +32,15 @@ public class file_processor_new {
 
     }
 
+    // Abstraction of getting the list of assets, without calling a bunch of other methods
     static List<Asset> get_assets(String filename, String addition) {
         List<String> lines = get_valuable_lines(filename);
         NodeList nodes = get_node_list(lines, addition);
         return get_asset_list(nodes);
     }
 
+    // Get all of the xml holdings objects from our previously read xml lines
+    // If there is another tag on the xml objects we use that as the addition
     private static NodeList get_node_list(List<String> xml_lines, String addition) {
         StringBuilder sb = new StringBuilder();
 
@@ -63,6 +66,7 @@ public class file_processor_new {
         return null;
     }
 
+    // Convert the xml objects we obtain earlier into a list of Asset objects
     private static List<Asset> get_asset_list(NodeList nodes) {
 
         List<Asset> assets = new ArrayList<>();
@@ -82,9 +86,11 @@ public class file_processor_new {
 
             // System.out.println(nl.getLength());
 
+            // num_shares and type are nested so we just bypass this by removing the messed up spacing
             String[] num_shares_and_type = nl.item(9).getTextContent()
                     .trim().replaceAll("\\s+"," ").split(" ");
 
+            // for all unnested objects we can just use .item(index)
             name = nl.item(1).getTextContent();
             title = nl.item(3).getTextContent();
             cusip = nl.item(5).getTextContent().toUpperCase();
@@ -93,6 +99,7 @@ public class file_processor_new {
             type = num_shares_and_type[1];
             discretion = nl.item(11).getTextContent();
 
+            // Create and add our new asset to our list of assets
             Asset a = new Asset(name, title, cusip, cash_value, num_shares, type, discretion);
             assets.add(a);
         }
@@ -100,7 +107,7 @@ public class file_processor_new {
         return assets;
     }
 
-
+    // Get those lines that contain the xml containing a firms holdings
     private static List<String> get_valuable_lines(String filename) {
 
         List<String> valuable_lines = new ArrayList<>();
