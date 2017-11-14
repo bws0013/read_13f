@@ -14,7 +14,7 @@ I have added some documentation if you want to see what the code is actually doi
   - Basic documentation of the code (done as of 11/13/17)
   - Generate csv file output (done as of 11/13/17)
   - Menu options to do everything from terminal (have not started)
-  - Create the db programmatically (have not started)
+  - Create the db programmatically (done as of 11/13/17)
   - Better documentation of process (have not started)
   - Remove unnecessary stuff (always in progress)
   - Webpage abstraction of program (maybe when I learn to web)

@@ -12,7 +12,10 @@ CREATE TABLE Assets (
  PRIMARY KEY (cik, confirmation_period)
 );
 
-CREATE TABLE Assets (
+
+SELECT name FROM sqlite_master WHERE type='table' AND name='Assets';
+
+CREATE TABLE IF NOT EXISTS Assets (
  cik text NOT NULL,
  confirmation_period DATE NOT NULL,
  name text,
@@ -25,3 +28,5 @@ CREATE TABLE Assets (
  discretion,
  PRIMARY KEY (cik, confirmation_period, cusip)
 );
+
+

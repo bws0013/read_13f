@@ -17,9 +17,10 @@ public class read_unknown_file {
         of 13f's into a database.
     */
 
-    public static String db_name = "jdbc:sqlite:./database/test.db";
 
     public static void main(String[] args) {
+
+        String db_name = "filings.db";
 
         List<String> filenames = new ArrayList<>();
         filenames.add("./storage/old_1.txt");
@@ -27,20 +28,22 @@ public class read_unknown_file {
         filenames.add("./storage/new_2.txt");
         filenames.add("./storage/new_3.txt");
 
-        add_to_database(filenames);
+        add_to_database(filenames, db_name);
 
     }
 
     // Add several files to our database
-    public static void add_to_database(List<String> filenames) {
+    public static void add_to_database(List<String> filenames, String db_name) {
+        database_layer.create_database(db_name);
         for(String filename : filenames) {
-            add_to_database(filename);
+            add_to_database(filename, db_name);
         }
     }
 
     // Add all of the data from a file to our database
-    public static void add_to_database(String filename) {
-        Map<String, Set<String>> cik_to_conf_period = database_layer.get_added_files(db_name);
+    public static void add_to_database(String filename, String db_name) {
+        Map<String, Set<String>> cik_to_conf_period
+                = database_layer.get_added_files(db_name);
 
         List<Asset> assets = pass_to_processors(filename);
         if(assets.size() == 0) return;
