@@ -1,10 +1,7 @@
 package com.ben.smith.reader;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by bensmith on 11/4/17.
@@ -17,18 +14,36 @@ public class read_unknown_file {
         of 13f's into a database.
     */
 
-
     public static void main(String[] args) {
 
+//        List<String> lines = read_file("./storage/old_2.txt");
+//        String[] arr = document_header_getter(lines);
+//        System.out.println(arr[0] + " : " + arr[1]);
+
         String db_name = "filings.db";
-
+//
         List<String> filenames = new ArrayList<>();
-        filenames.add("./storage/old_1.txt");
-        filenames.add("./storage/new_1.txt");
-        filenames.add("./storage/new_2.txt");
-        filenames.add("./storage/new_3.txt");
-
+        filenames.add("./storage/old_2.txt");
+//        filenames.add("./storage/old_1.txt");
+//        filenames.add("./storage/new_1.txt");
+//        filenames.add("./storage/new_2.txt");
+//        filenames.add("./storage/new_3.txt");
         add_to_database(filenames, db_name);
+    }
+
+    // This is to be used later when users can select what they are looking to do
+    public static void menu() {
+
+        Scanner sc = new Scanner(System.in);
+
+        String intro = "\nEnter the (c)haracter from the options listed";
+        String options =
+            "Read data into a new (d)atabase\n" +
+            "Read data into an (e)xisting database\n" +
+            "Read data into a new (c)sv\n" +
+            "Read data into an e(x)isting csv" +
+            "(q)uit";
+        String write_char = ">";
 
     }
 
@@ -66,12 +81,12 @@ public class read_unknown_file {
 
     // Determine which file processor we need to pass our file to and get the assets from that file
     public static List<Asset> pass_to_processors(String filename) {
-        List<Asset> assets = null;
+        List<Asset> assets = new ArrayList<>();
 
         String file_type = determine_file_type(filename);
         if (file_type.equals("#")) {
             System.out.println("File type unknown!");
-            System.exit(1);
+            return assets;
         } else if (file_type.equals("old_1")) {
             assets = file_processor_old.get_assets(filename);
             assets = add_asset_headers(assets, filename);
@@ -170,9 +185,14 @@ public class read_unknown_file {
     }
 
 
-    // Get the cik and the CONFORMED PERIOD OF REPORT from a 13f
+    /*
+     Gets the cik and the CONFORMED PERIOD OF REPORT from a 13f
+
+     We are also addressing ammended (13f-hr/a) files here,
+     we just want to skip them as for now, we may want to keep later
+     in the future there may be an option involving changing global variables
+     */
     private static String[] document_header_getter(List<String> text_lines) {
-        text_lines = text_lines.subList(0, 20);
         for(int i = 0; i < text_lines.size(); i++) {
             text_lines.set(i, text_lines.get(i).replaceAll("\\s+",""));
         }
@@ -186,6 +206,9 @@ public class read_unknown_file {
                 cik = elements[1];
             } else if(elements[0].equals("CONFORMEDPERIODOFREPORT")) {
                 report_period = elements[1];
+            }
+            if(line.equals("CONFORMEDSUBMISSIONTYPE:13F-HR/A")) {
+                return new String[]{"#", "#"};
             }
         }
 

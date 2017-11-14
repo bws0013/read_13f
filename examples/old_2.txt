@@ -1,0 +1,153 @@
+-----BEGIN PRIVACY-ENHANCED MESSAGE-----
+Proc-Type: 2001,MIC-CLEAR
+Originator-Name: webmaster@www.sec.gov
+Originator-Key-Asymmetric:
+ MFgwCgYEVQgBAQICAf8DSgAwRwJAW2sNKK9AVtBzYZmr6aGjlWyK3XmZv3dTINen
+ TWSM7vrzLADbmYQaionwg5sDW3P6oaM5D3tdezXMm7z1T+B+twIDAQAB
+MIC-Info: RSA-MD5,RSA,
+ Czi3JhzTj/0OlvAEkN1gkF7yiSLLHhnMGFH9NQBddlTQYGoWK2IQk4RmC9FX4/2Y
+ Xs0m2FXBhqT7ONMkds6v1A==
+
+<SEC-DOCUMENT>0001061768-08-000104.txt : 20080213
+<SEC-HEADER>0001061768-08-000104.hdr.sgml : 20080213
+<ACCEPTANCE-DATETIME>20080213160722
+ACCESSION NUMBER:		0001061768-08-000104
+CONFORMED SUBMISSION TYPE:	13F-HR/A
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20070930
+FILED AS OF DATE:		20080213
+DATE AS OF CHANGE:		20080213
+EFFECTIVENESS DATE:		20080213
+
+FILER:
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			BAUPOST GROUP LLC/MA
+		CENTRAL INDEX KEY:			0001061768
+		IRS NUMBER:				043402144
+
+	FILING VALUES:
+		FORM TYPE:		13F-HR/A
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	028-07120
+		FILM NUMBER:		08604797
+
+	BUSINESS ADDRESS:	
+		STREET 1:		10 ST JAMES AVE
+		STREET 2:		SUITE 1700
+		CITY:			BOSTON
+		STATE:			MA
+		ZIP:			02116
+		BUSINESS PHONE:		617-210-8300
+
+	MAIL ADDRESS:	
+		STREET 1:		10 ST JAMES AVE
+		STREET 2:		SUITE 1700
+		CITY:			BOSTON
+		STATE:			MA
+		ZIP:			02116
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>13F-HR/A
+<SEQUENCE>1
+<FILENAME>acn3q07b.txt
+<DESCRIPTION>SEPT 2007 13F AMENDMENT
+<TEXT>
+                                  UNITED STATES
+                       SECURITIES AND EXCHANGE COMMISSION
+                            Washington, D.C.  20549
+
+                                    Form 13F
+
+                              Form 13F COVER PAGE
+
+Report for the Calendar Year or Quarter Ended: 09-30-2007
+
+Check here if Amendment [ X]; Amendment Number: 1
+This Amendment (Check only one.): [  ] is a restatement.
+                                  [ X] adds new holdings entries.
+
+Institutional Investment Manager Filing this Report:
+
+Name:    THE BAUPOST GROUP, LLC
+Address: 10 ST. JAMES AVENUE
+         SUITE 2000
+         BOSTON, MA  02116
+
+13F File Number:  28-7120
+
+The institutional investment manager filing this report and the person by whom
+it is signed hereby represent that the person signing the report is authorized
+to submit it, that all information contained herein is true, correct and
+complete, and that it is understood that all required items, statements,
+schedules, lists, and tables, are considered integral parts of this form.
+
+Person Signing this Report on Behalf of Reporting Manager:
+
+Name:      PAUL C. GANNON
+Title:     CHIEF FINANCIAL OFFICER
+Phone:     617-210-8300
+
+Signature, Place, and Date of Signing:
+
+     PAUL C. GANNON     BOSTON, MA     February 13, 2007
+
+
+Report Type (Check only one.):
+
+[ X]         13F HOLDINGS REPORT.
+
+[  ]         13F NOTICE.
+
+[  ]         13F COMBINATION REPORT.
+
+
+
+
+
+<PAGE>
+
+                              FORM 13F SUMMARY PAGE
+
+
+Report Summary:
+
+Number of Other Included Managers:         0
+
+Form13F Information Table Entry Total:     1
+
+Form13F Information Table Value Total:     $63,760 (thousands)
+
+
+List of Other Included Managers:
+
+Provide a numbered list of the name(s) and Form 13F file number(s) of all
+institutional managers with respect to which this report is filed, other
+than the manager filing this report.
+
+NONE
+
+
+<PAGE>
+
+
+
+<TABLE>
+<CAPTION>
+                                                         FORM 13F
+
+                                                      INFORMATION TABLE
+- ------------------------------------------------------------------------------------------------------------------------------------
+ITEM 1                          ITEM 2          ITEM 3       ITEM 4      ITEM 5       ITEM 6    ITEM 7              ITEM 8
+- ------                          -------         ------      ------- ---------------- --------  --------   --------------------------
+
+                                                            VALUE  SHARES/  SH/ PUT/ INVSTMT OTHER            VOTING AUTHORITY
+NAME OF ISSUER                 TITLE OF CLASS   CUSIP      (x$1000) PRN AMT PRN CALL DSCRETN MANAGERS     SOLE     SHARED  NONE
+- ------------------------------ ---------------- --------- -------- -------- --- ---- ------- ------------ -------- -------- --------
+<S>                            <C>              <C>         <C>    <C>      <C> <C>  <C>     <C>          <C>        <C>    <C>
+LINN ENERGY LLC                UNIT LTD LIAB    536020100    63760  2000000 SH       SOLE                  2000000
+</TABLE>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>
+-----END PRIVACY-ENHANCED MESSAGE-----

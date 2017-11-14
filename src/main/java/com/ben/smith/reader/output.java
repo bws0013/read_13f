@@ -2,7 +2,9 @@ package com.ben.smith.reader;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by bensmith on 11/13/17.
@@ -28,6 +30,15 @@ public class output {
 
     // Create a single csv file containing info from all the individual 13f filings.
     public static void create_csv_from_multiple_files(List<String> filenames, String output_file_name) {
+
+        // The below removes all duplicates from the filenames list before proceeding
+        Set<String> files_set = new HashSet<>();
+        for(String filename : filenames) { files_set.add(filename); }
+        List<String> temp_list = new ArrayList<>();
+        temp_list.addAll(files_set);
+        filenames = temp_list;
+
+        // This actually processes the files and sends them to the output csv
         for(String filename : filenames) {
             List<Asset> assets = read_unknown_file.pass_to_processors(filename);
             print_to_csv(output_file_name, assets);
