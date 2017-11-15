@@ -1,10 +1,14 @@
 package com.ben.smith.reader;
 
+import org.apache.commons.io.FileUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-import java.io.IOException;
+import java.io.*;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,13 +33,41 @@ public class web_scraper {
 
     }
 
+    public static void get_files(String string_url) {
+        List<String> lines = new ArrayList<>();
+        try {
+            URL oracle = new URL(string_url);
+            BufferedReader in = new BufferedReader(new InputStreamReader(oracle.openStream()));
+
+            String inputLine;
+            while ((inputLine = in.readLine()) != null)
+                lines.add(inputLine);
+            in.close();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        for(String line : lines) {
+            System.out.println(line);
+        }
+    }
+
     public static void createFinDocs(String cik) {
         System.out.println("Obtaining Documents for: " + cik);
         String[] arr = getAllPageLinks(cik);
 
-        for(int i = 0; i < arr.length; i++) {
-            arr[i] = generateUrl(cik, arr[i]);
-            System.out.println(arr[i]);
+        try {
+//            for (int i = 0; i < arr.length; i++) {
+            for (int i = 0; i < 1; i++) {
+                arr[i] = generateUrl(cik, arr[i]);
+                System.out.println(arr[i]);
+                get_files(arr[i]);
+                Thread.sleep(1000);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
 
 
