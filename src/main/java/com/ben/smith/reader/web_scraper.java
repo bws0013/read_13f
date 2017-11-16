@@ -35,6 +35,10 @@ public class web_scraper {
 
     public static List<String> get_file_contents(String string_url) {
         List<String> lines = new ArrayList<>();
+        if(global_constants.wait_time < 500) {
+            return lines;
+        }
+
         try {
             URL oracle = new URL(string_url);
             BufferedReader in = new BufferedReader(new InputStreamReader(oracle.openStream()));
@@ -43,35 +47,31 @@ public class web_scraper {
             while ((inputLine = in.readLine()) != null)
                 lines.add(inputLine);
             in.close();
+
+            Thread.sleep(global_constants.wait_time);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         return lines;
     }
 
-    public static void createFinDocs(String cik) {
+    public static String[] createFinDocs(String cik) {
         System.out.println("Obtaining Documents for: " + cik);
         String[] arr = getAllPageLinks(cik);
 
-        try {
-            if(global_constants.wait_time < 500) {
-                return;
-            }
+        List<String> file_content = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = generateUrl(cik, arr[i]);
+            file_content = get_file_contents(arr[i]);
 
-            List<String> file_content = new ArrayList<>();
-            for (int i = 0; i < arr.length; i++) {
-                arr[i] = generateUrl(cik, arr[i]);
-                file_content = get_file_contents(arr[i]);
-                Thread.sleep(global_constants.wait_time);
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
 
-
+        return arr;
     }
 
     /*

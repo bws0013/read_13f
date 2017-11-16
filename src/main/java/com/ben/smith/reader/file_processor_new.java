@@ -21,20 +21,20 @@ public class file_processor_new {
 
     public static void main(String[] args) {
 
-        String filename = "./storage/new_1.txt";
-        String addition = "";
-
-        List<Asset> assets = get_assets(filename, addition);
-
-        for(Asset a : assets) {
-            a.print_all_fields();
-        }
+//        String filename = "./storage/new_1.txt";
+//        String addition = "";
+//
+//        List<Asset> assets = get_assets(filename, addition);
+//
+//        for(Asset a : assets) {
+//            a.print_all_fields();
+//        }
 
     }
 
     // Abstraction of getting the list of assets, without calling a bunch of other methods
-    static List<Asset> get_assets(String filename, String addition) {
-        List<String> lines = get_valuable_lines(filename);
+    static List<Asset> get_assets(List<String> text_lines, String addition) {
+        List<String> lines = get_valuable_lines(text_lines);
         NodeList nodes = get_node_list(lines, addition);
         return get_asset_list(nodes);
     }
@@ -108,11 +108,9 @@ public class file_processor_new {
     }
 
     // Get those lines that contain the xml containing a firms holdings
-    private static List<String> get_valuable_lines(String filename) {
+    private static List<String> get_valuable_lines(List<String> text_lines) {
 
         List<String> valuable_lines = new ArrayList<>();
-
-        List<String> text_lines = read_unknown_file.read_file(filename);
 
         boolean seen_xml_before = false;
 
