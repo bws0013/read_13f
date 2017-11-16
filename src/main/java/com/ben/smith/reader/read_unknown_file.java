@@ -96,7 +96,6 @@ public class read_unknown_file {
         }
 
         return assets;
-
     }
 
     // Add the cik and confirmation period to all of the assets

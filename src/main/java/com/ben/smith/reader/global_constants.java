@@ -20,4 +20,10 @@ class global_constants {
     // This does nothing for now but may have some impact later
     static final boolean skip_ammended_filings = true;
 
+    // Wait time on calls (milliseconds) to the sec web site
+    // please keep this number at at least 500
+    static final int wait_time = 500;
+
+
+
 }

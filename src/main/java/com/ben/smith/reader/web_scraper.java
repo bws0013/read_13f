@@ -33,7 +33,7 @@ public class web_scraper {
 
     }
 
-    public static void get_files(String string_url) {
+    public static List<String> get_file_contents(String string_url) {
         List<String> lines = new ArrayList<>();
         try {
             URL oracle = new URL(string_url);
@@ -49,9 +49,7 @@ public class web_scraper {
             e.printStackTrace();
         }
 
-        for(String line : lines) {
-            System.out.println(line);
-        }
+        return lines;
     }
 
     public static void createFinDocs(String cik) {
@@ -59,12 +57,15 @@ public class web_scraper {
         String[] arr = getAllPageLinks(cik);
 
         try {
-//            for (int i = 0; i < arr.length; i++) {
-            for (int i = 0; i < 1; i++) {
+            if(global_constants.wait_time < 500) {
+                return;
+            }
+
+            List<String> file_content = new ArrayList<>();
+            for (int i = 0; i < arr.length; i++) {
                 arr[i] = generateUrl(cik, arr[i]);
-                System.out.println(arr[i]);
-                get_files(arr[i]);
-                Thread.sleep(1000);
+                file_content = get_file_contents(arr[i]);
+                Thread.sleep(global_constants.wait_time);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
