@@ -1,5 +1,6 @@
 package com.ben.smith.reader;
 
+import java.io.File;
 import java.sql.*;
 import java.util.*;
 
@@ -18,6 +19,8 @@ public class database_layer {
     }
 
     public static void add_date(String db_name, List<Asset> assets) {
+        create_database(db_name);
+
         Connection conn = null;
         Asset b = assets.get(0);
         try {
@@ -77,9 +80,16 @@ public class database_layer {
 
         Map<String, Set<String>> cik_to_conf_period = new HashMap<>();
 
+        // Check to make sure we only check the table if it exists
+        File f = new File(global_constants.db_location + db_name);
+        if(!(f.exists() && !f.isDirectory())) {
+            return cik_to_conf_period;
+        }
+
         Connection conn = null;
         try {
             String url = global_constants.jdbc_type + global_constants.db_location + db_name;
+
             // create a connection to the database
             conn = DriverManager.getConnection(url);
 
@@ -149,6 +159,21 @@ public class database_layer {
     public static void create_database(String db_name) {
         Connection conn = null;
 
+        /*
+        "CREATE TABLE IF NOT EXISTS Assets(\n " +
+                        "cik text NOT NULL,\n" +
+                        "confirmation_period DATE NOT NULL,\n" +
+                        " name text,\n" +
+                        " title text,\n" +
+                        " cusip text NOT NULL,\n" +
+                        " excel_cusip text,\n" +
+                        " cash_value integer,\n" +
+                        " num_shares integer,\n" +
+                        " type text,\n" +
+                        " discretion,\n" +
+                        " PRIMARY KEY (cik, confirmation_period, cusip));"
+         */
+
         String sqlCreate =
                 String.format(
                         "CREATE TABLE IF NOT EXISTS Assets(\n " +
@@ -161,13 +186,13 @@ public class database_layer {
                         " cash_value integer,\n" +
                         " num_shares integer,\n" +
                         " type text,\n" +
-                        " discretion,\n" +
-                        " PRIMARY KEY (cik, confirmation_period, cusip));"
+                        " discretion);"
                 );
 
         try {
             String url = global_constants.jdbc_type + global_constants.db_location + db_name;
             // create a connection to the database
+            System.out.println(url);
 
             conn = DriverManager.getConnection(url);
             Statement stmt = conn.createStatement();

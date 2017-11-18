@@ -40,7 +40,8 @@ public class output {
 
         // This actually processes the files and sends them to the output csv
         for(String filename : filenames) {
-            List<Asset> assets = read_unknown_file.pass_to_processors(filename);
+            List<String> text_lines = read_unknown_file.read_file(filename);
+            List<Asset> assets = read_unknown_file.pass_to_processors(text_lines);
             print_to_csv(output_file_name, assets);
         }
     }
