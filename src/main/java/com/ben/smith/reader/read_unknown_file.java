@@ -24,7 +24,8 @@ public class read_unknown_file {
         String[] urls = web_scraper.createFinDocs(ciks.get(0));
         List<String> file_text = web_scraper.get_file_contents(urls[0]);
 
-        add_to_database(file_text, db_name);
+//        add_to_csv(file_text, "plz.csv");
+         add_to_database(file_text, db_name);
     }
 
     // This is to be used later when users can select what they are looking to do
@@ -43,8 +44,17 @@ public class read_unknown_file {
 
     }
 
+    public static void add_to_csv(List<String> text_lines, String csv_name) {
+
+        List<Asset> assets = pass_to_processors(text_lines);
+
+        output.print_to_csv(global_constants.output_dir + csv_name, assets);
+
+    }
+
     // Add all of the data from a file to our database
     public static void add_to_database(List<String> text_lines, String db_name) {
+
         Map<String, Set<String>> cik_to_conf_period
                 = database_layer.get_added_files(db_name);
 
@@ -62,7 +72,9 @@ public class read_unknown_file {
             }
         }
 
-        assets = pass_to_processors(text_lines);
+
+        //assets = pass_to_processors(text_lines);
+        System.out.println("About to add");
         database_layer.add_date(db_name, assets);
         System.out.println("added");
     }
