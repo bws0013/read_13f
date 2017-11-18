@@ -20,12 +20,9 @@ public class read_unknown_file {
 
         List<String> ciks = new ArrayList<>();
         ciks.add("0001607863");
+        ciks.add("0000919859");
 
-        String[] urls = web_scraper.createFinDocs(ciks.get(0));
-        List<String> file_text = web_scraper.get_file_contents(urls[0]);
-
-//        add_to_csv(file_text, "plz.csv");
-         add_to_database(file_text, db_name);
+        pass_date(ciks, db_name, "db");
     }
 
     // This is to be used later when users can select what they are looking to do
@@ -44,38 +41,58 @@ public class read_unknown_file {
 
     }
 
-    public static void add_to_csv(List<String> text_lines, String csv_name) {
+    // The abstraction of passing data, pass your params and this does the rest
+    public static void pass_date(List<String> ciks, String output_thing_name, String pass_to) {
 
-        List<Asset> assets = pass_to_processors(text_lines);
-
-        output.print_to_csv(global_constants.output_dir + csv_name, assets);
-
-    }
-
-    // Add all of the data from a file to our database
-    public static void add_to_database(List<String> text_lines, String db_name) {
-
-        Map<String, Set<String>> cik_to_conf_period
-                = database_layer.get_added_files(db_name);
-
-        List<Asset> assets = pass_to_processors(text_lines);
-        if(assets.size() == 0) return;
-
-        String cik = assets.get(0).getCik();
-        String conf_period = assets.get(0).getConfirmation_period();
-
-        if(cik_to_conf_period.containsKey(cik)) {
-            Set<String> conf_periods = cik_to_conf_period.get(cik);
-            if(conf_periods.contains(conf_period)) {
-                System.out.println("not added");
+        for(String cik : ciks) {
+            System.out.println("Obtaining Documents for: " + cik);
+            List<String> urls = web_scraper.createFinDocs(cik);
+            if(pass_to.equals("csv")) {
+                add_to_csv(urls, output_thing_name);
+            } else if(pass_to.equals("db")) {
+                add_to_database(urls, output_thing_name);
+            } else {
+                System.out.println("Chose csv or db. Exiting");
                 return;
             }
         }
 
-        //assets = pass_to_processors(text_lines);
-        System.out.println("About to add");
-        database_layer.add_date(db_name, assets);
-        System.out.println("added");
+    }
+
+    public static void add_to_csv(List<String> urls, String csv_name) {
+
+        for(String url : urls) {
+            List<String> text_lines = web_scraper.get_file_contents(url);
+            List<Asset> assets = pass_to_processors(text_lines);
+
+            output.print_to_csv(global_constants.output_dir + csv_name, assets);
+        }
+    }
+
+    // Add all of the data from a file to our database
+    public static void add_to_database(List<String> urls, String db_name) {
+
+        Map<String, Set<String>> cik_to_conf_period
+                = database_layer.get_added_files(db_name);
+
+        for(String url : urls) {
+            List<String> text_lines = web_scraper.get_file_contents(url);
+            List<Asset> assets = pass_to_processors(text_lines);
+            if (assets.size() == 0) return;
+
+            String cik = assets.get(0).getCik();
+            String conf_period = assets.get(0).getConfirmation_period();
+
+            if (cik_to_conf_period.containsKey(cik)) {
+                Set<String> conf_periods = cik_to_conf_period.get(cik);
+                if (conf_periods.contains(conf_period)) {
+                    System.out.printf("Unable to add %s at %s!\n", cik, conf_period);
+                    continue;
+                }
+            }
+
+            database_layer.add_date(db_name, assets);
+        }
     }
 
     // Determine which file processor we need to pass our file to and get the assets from that file
