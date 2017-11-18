@@ -18,5 +18,4 @@ I have added some documentation if you want to see what the code is actually doi
   - Better documentation of process (have not started)
   - Remove unnecessary stuff (always in progress)
   - Webpage abstraction of program (maybe when I learn to web)
-  - Web Scraper to retrieve the selected 13f filing for a particular cik (done as of 11/16/17)
-  - Full instance of going from cik to passing data into db (in progress)
+  - Web Scraper to retrieve the selected 13f filing for a particular cik (definitely on its way)

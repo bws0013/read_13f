@@ -15,7 +15,7 @@ class global_constants {
 
     // The maximum number of filings you are pulling
     // Approximately 4/year (we are skipping ammended ones for now)
-    static final int numDocs = 10;
+    static final int numDocs = 20;
 
     // This does nothing for now but may have some impact later
     static final boolean skip_ammended_filings = true;
@@ -24,6 +24,6 @@ class global_constants {
     // please keep this number at at least 500
     static final int wait_time = 500;
 
-    static final String output_dir = "./output_for_csvs/";
+
 
 }

@@ -16,16 +16,19 @@ public class read_unknown_file {
 
     public static void main(String[] args) {
 
+//        List<String> lines = read_file("./storage/old_2.txt");
+//        String[] arr = document_header_getter(lines);
+//        System.out.println(arr[0] + " : " + arr[1]);
+
         String db_name = "filings.db";
-
-        List<String> ciks = new ArrayList<>();
-        ciks.add("0001607863");
-
-        String[] urls = web_scraper.createFinDocs(ciks.get(0));
-        List<String> file_text = web_scraper.get_file_contents(urls[0]);
-
-//        add_to_csv(file_text, "plz.csv");
-         add_to_database(file_text, db_name);
+//
+        List<String> filenames = new ArrayList<>();
+        filenames.add("./storage/old_2.txt");
+//        filenames.add("./storage/old_1.txt");
+//        filenames.add("./storage/new_1.txt");
+//        filenames.add("./storage/new_2.txt");
+//        filenames.add("./storage/new_3.txt");
+        add_to_database(filenames, db_name);
     }
 
     // This is to be used later when users can select what they are looking to do
@@ -44,21 +47,20 @@ public class read_unknown_file {
 
     }
 
-    public static void add_to_csv(List<String> text_lines, String csv_name) {
-
-        List<Asset> assets = pass_to_processors(text_lines);
-
-        output.print_to_csv(global_constants.output_dir + csv_name, assets);
-
+    // Add several files to our database
+    public static void add_to_database(List<String> filenames, String db_name) {
+        database_layer.create_database(db_name);
+        for(String filename : filenames) {
+            add_to_database(filename, db_name);
+        }
     }
 
     // Add all of the data from a file to our database
-    public static void add_to_database(List<String> text_lines, String db_name) {
-
+    public static void add_to_database(String filename, String db_name) {
         Map<String, Set<String>> cik_to_conf_period
                 = database_layer.get_added_files(db_name);
 
-        List<Asset> assets = pass_to_processors(text_lines);
+        List<Asset> assets = pass_to_processors(filename);
         if(assets.size() == 0) return;
 
         String cik = assets.get(0).getCik();
@@ -72,34 +74,35 @@ public class read_unknown_file {
             }
         }
 
-        //assets = pass_to_processors(text_lines);
-        System.out.println("About to add");
+        assets = pass_to_processors(filename);
         database_layer.add_date(db_name, assets);
         System.out.println("added");
     }
 
     // Determine which file processor we need to pass our file to and get the assets from that file
-    public static List<Asset> pass_to_processors(List<String> text_lines) {
+    public static List<Asset> pass_to_processors(String filename) {
         List<Asset> assets = new ArrayList<>();
 
-        String file_type = determine_file_type(text_lines);
+        String file_type = determine_file_type(filename);
         if (file_type.equals("#")) {
             System.out.println("File type unknown!");
             return assets;
         } else if (file_type.equals("old_1")) {
-            assets = file_processor_old.get_assets(text_lines);
-            assets = add_asset_headers(assets, text_lines);
+            assets = file_processor_old.get_assets(filename);
+            assets = add_asset_headers(assets, filename);
         } else {
-            assets = file_processor_new.get_assets(text_lines, file_type);
-            assets = add_asset_headers(assets, text_lines);
+            assets = file_processor_new.get_assets(filename, file_type);
+            assets = add_asset_headers(assets, filename);
         }
+
         return assets;
     }
 
     // Add the cik and confirmation period to all of the assets
-    private static List<Asset> add_asset_headers(List<Asset> assets, List<String> text_lines) {
+    private static List<Asset> add_asset_headers(List<Asset> assets, String filename) {
 
-        String[] header = document_header_getter(text_lines);
+        List<String> file_text = read_file(filename);
+        String[] header = document_header_getter(file_text);
 
         List<Asset> assets_fixed = new ArrayList<>();
 
@@ -109,6 +112,12 @@ public class read_unknown_file {
         }
 
         return assets_fixed;
+    }
+
+    // Read a file and get if it is old or new and what type of new it is
+    private static String determine_file_type(String filename) {
+        List<String> text_lines = read_file(filename);
+        return determine_file_type(text_lines);
     }
 
     // Used for determining what we will need to read the document with
