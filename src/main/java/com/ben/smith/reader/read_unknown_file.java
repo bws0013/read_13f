@@ -72,7 +72,6 @@ public class read_unknown_file {
             }
         }
 
-
         //assets = pass_to_processors(text_lines);
         System.out.println("About to add");
         database_layer.add_date(db_name, assets);

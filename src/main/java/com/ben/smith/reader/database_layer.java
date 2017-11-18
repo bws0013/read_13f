@@ -1,5 +1,6 @@
 package com.ben.smith.reader;
 
+import java.io.File;
 import java.sql.*;
 import java.util.*;
 
@@ -79,9 +80,16 @@ public class database_layer {
 
         Map<String, Set<String>> cik_to_conf_period = new HashMap<>();
 
+        // Check to make sure we only check the table if it exists
+        File f = new File(global_constants.db_location + db_name);
+        if(!(f.exists() && !f.isDirectory())) {
+            return cik_to_conf_period;
+        }
+
         Connection conn = null;
         try {
             String url = global_constants.jdbc_type + global_constants.db_location + db_name;
+
             // create a connection to the database
             conn = DriverManager.getConnection(url);
 
