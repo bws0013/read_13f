@@ -60,18 +60,18 @@ public class web_scraper {
         return lines;
     }
 
-    public static String[] createFinDocs(String cik) {
-        System.out.println("Obtaining Documents for: " + cik);
+    public static List<String> createFinDocs(String cik) {
         String[] arr = getAllPageLinks(cik);
+        List<String> urls_to_return = new ArrayList<>();
 
         List<String> file_content = new ArrayList<>();
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = generateUrl(cik, arr[i]);
-            file_content = get_file_contents(arr[i]);
+            urls_to_return.add(generateUrl(cik, arr[i]));
+
 
         }
 
-        return arr;
+        return urls_to_return;
     }
 
     /*

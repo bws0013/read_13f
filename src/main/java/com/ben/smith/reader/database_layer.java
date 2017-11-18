@@ -192,7 +192,6 @@ public class database_layer {
         try {
             String url = global_constants.jdbc_type + global_constants.db_location + db_name;
             // create a connection to the database
-            System.out.println(url);
 
             conn = DriverManager.getConnection(url);
             Statement stmt = conn.createStatement();
