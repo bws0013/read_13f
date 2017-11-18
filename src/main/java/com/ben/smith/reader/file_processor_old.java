@@ -11,10 +11,10 @@ import java.util.regex.Pattern;
 class file_processor_old {
 
     // Takes in a filename and returns the assets from that file
-    static List<Asset> get_assets(List<String> text_lines) {
+    static List<Asset> get_assets(String filename) {
         file_processor_old f = new file_processor_old();
 
-        List<String> valuable_lines = f.read_old_1(text_lines);
+        List<String> valuable_lines = f.read_old_1(filename);
         int guessed_offset = f.collect_possible_cusip_offsets(valuable_lines);
         return f.create_assets(guessed_offset, valuable_lines);
     }
@@ -114,7 +114,9 @@ class file_processor_old {
     }
 
     // Read the old filing type and get the relevant lines from it
-    private List<String> read_old_1(List<String> text_lines) {
+    private List<String> read_old_1(String filename) {
+
+        List<String> text_lines = read_unknown_file.read_file(filename);
 
         List<String> lines_we_care_about = new ArrayList<>();
 
