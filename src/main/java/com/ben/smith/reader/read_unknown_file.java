@@ -31,6 +31,11 @@ public class read_unknown_file {
         Scanner sc = new Scanner(System.in);
 
         String intro = "\nEnter the (c)haracter from the options listed";
+
+        /*
+        Enable selecting how many files you want to retrieve, make default
+        be the constant value we set
+        */
         String options =
             "Read data into a new (d)atabase\n" +
             "Read data into an (e)xisting database\n" +

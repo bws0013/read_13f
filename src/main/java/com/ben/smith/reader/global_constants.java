@@ -24,6 +24,11 @@ class global_constants {
     // please keep this number at at least 500
     static final int wait_time = 500;
 
+    // Output directory for created csv files
     static final String output_dir = "./output_for_csvs/";
+
+    // THis may be used later if we want to keep our filings stored somewhere
+    // after we download and analyze them.
+    static final boolean keep_downloaded_filings = false;
 
 }
