@@ -54,7 +54,7 @@ public class read_unknown_file {
         String user_input = sc.nextLine();
         System.out.println(extension_reminder);
         switch (user_input.toLowerCase()) {
-            case "#":
+            case "q":
                 return;
             case "d":
                 System.out.print("Enter the name of the database you would like to use" +
@@ -79,8 +79,14 @@ public class read_unknown_file {
 
     }
 
+    // Assists the menu method in getting ciks. Its separate so as to be cleaner.
+    // Also gets the maximum number of files you would like to retrieve
     public static List<String> get_ciks() {
         List<String> cik_list = new ArrayList<>();
+
+        String file_get_limit = "What is the maximum number of quarterly filings " +
+                "you would like to retrieve" +
+                "\n(Enter either: 10, 20, 40, 80 or 100)\n>";
 
         String cik_instructions = "Now you can enter CIK numbers one at a time\n" +
                 "When you are finished entering ciks press # then press enter.";
@@ -94,11 +100,27 @@ public class read_unknown_file {
             System.out.print(get_cik);
             local_cik = sc.nextLine();
             if(local_cik.equals("#")) {
-                sc.close();
-                return cik_list;
+                break;
             }
             cik_list.add(local_cik);
         }
+        if(cik_list.size() > 0) {
+            System.out.print(file_get_limit);
+            String str_limit = sc.nextLine();
+            int int_limit = 10;
+            try {
+                int_limit = Integer.parseInt(str_limit);
+
+            } catch (Exception e) {
+                System.out.println("There was a problem parsing your number." +
+                "\n10 will be used as the default.");
+                int_limit = 10;
+            }
+            global_constants.set_changeable_numDocs(int_limit);
+        }
+
+        sc.close();
+        return cik_list;
     }
 
 
@@ -120,6 +142,7 @@ public class read_unknown_file {
 
     }
 
+    // Abstraction of adding data to a csv
     public static void add_to_csv(List<String> urls, String csv_name) {
 
         for(String url : urls) {
@@ -130,7 +153,7 @@ public class read_unknown_file {
         }
     }
 
-    // Add all of the data from a file to our database
+    // Abstraction of adding data to a database
     public static void add_to_database(List<String> urls, String db_name) {
 
         Map<String, Set<String>> cik_to_conf_period
@@ -282,21 +305,4 @@ public class read_unknown_file {
 
         return new String[]{cik, report_period};
     }
-
-
-    // This is being used for testing later on
-    // Print the contents of a directory
-    public static void print_files_in_directory(String directory) {
-        File folder = new File(directory);
-        File[] listOfFiles = folder.listFiles();
-        for (int i = 0; i < listOfFiles.length; i++) {
-            if (listOfFiles[i].isFile()) {
-                System.out.println("File " + listOfFiles[i].getName());
-            } else if (listOfFiles[i].isDirectory()) {
-                System.out.println("Directory " + listOfFiles[i].getName());
-            }
-        }
-    }
-
-
 }

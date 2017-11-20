@@ -13,10 +13,6 @@ class global_constants {
     // The folder location of you database
     static final String db_location = "./database/";
 
-    // The maximum number of filings you are pulling
-    // Approximately 4/year (we are skipping ammended ones for now)
-    static final int numDocs = 10;
-
     // This does nothing for now but may have some impact later
     static final boolean skip_ammended_filings = true;
 
@@ -31,4 +27,13 @@ class global_constants {
     // after we download and analyze them.
     static final boolean keep_downloaded_filings = false;
 
+    // The maximum number of filings you are pulling
+    // Approximately 4/year (we are skipping ammended ones for now)
+//    static final int numDocs = 10;
+
+    // This will probably be changed later as it does not fit in this method
+    static int numDocs = 10;
+    static void set_changeable_numDocs(int new_numDocs) {
+        numDocs = new_numDocs;
+    }
 }

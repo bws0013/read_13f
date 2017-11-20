@@ -18,13 +18,16 @@ public class database_layer {
 //        connect(db_name);
     }
 
+    // Adds data to a databse
     public static void add_date(String db_name, List<Asset> assets) {
+        // Ensures that there is a db to add data to.
         create_database(db_name);
 
         Connection conn = null;
         Asset b = assets.get(0);
         try {
             String url = global_constants.jdbc_type + global_constants.db_location + db_name;
+
             // create a connection to the database
             conn = DriverManager.getConnection(url);
 
@@ -33,6 +36,7 @@ public class database_layer {
             PreparedStatement ps =
                     conn.prepareStatement("insert into Assets values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
+            // Add each asset to a batch statement to add all the data at once.
             for(Asset a : assets) {
                 b = a;
                 int cash_val = Integer.parseInt(a.getCash_value());
@@ -75,7 +79,13 @@ public class database_layer {
 
     }
 
-    // Collect the info to know if we have previously read this 13f
+    /*
+        Collect the info to know if we have previously read this 13f
+        We can determine if we have read a 13f previously by looking at
+        its cik and confirmation period. If our database already contains
+        that unique combination then we have already processed it into
+        our database, so we do not need to add it again.
+    */
     public static Map<String, Set<String>> get_added_files(String db_name) {
 
         Map<String, Set<String>> cik_to_conf_period = new HashMap<>();
@@ -155,24 +165,15 @@ public class database_layer {
         return cik_to_conf_period;
     }
 
-    // Create the database and table if it does not already exist
+    /*
+        Create the database and table if it does not already exist
+        We have no primary key because sometimes a firm will have 2
+        separate holdings of the same security so there is a possible
+        situation where every value in one row is identical to that
+        of another row.
+    */
     public static void create_database(String db_name) {
         Connection conn = null;
-
-        /*
-        "CREATE TABLE IF NOT EXISTS Assets(\n " +
-                        "cik text NOT NULL,\n" +
-                        "confirmation_period DATE NOT NULL,\n" +
-                        " name text,\n" +
-                        " title text,\n" +
-                        " cusip text NOT NULL,\n" +
-                        " excel_cusip text,\n" +
-                        " cash_value integer,\n" +
-                        " num_shares integer,\n" +
-                        " type text,\n" +
-                        " discretion,\n" +
-                        " PRIMARY KEY (cik, confirmation_period, cusip));"
-         */
 
         String sqlCreate =
                 String.format(
@@ -200,30 +201,4 @@ public class database_layer {
             e.printStackTrace();
         }
     }
-
-    // Testing if we can connect to the database, copied from the internet
-    public static void connect(String db_name) {
-        Connection conn = null;
-        try {
-
-            String url = global_constants.jdbc_type + global_constants.db_location + db_name;
-            // create a connection to the database
-            conn = DriverManager.getConnection(url);
-
-            System.out.println("Connection to SQLite has been established.");
-
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        } finally {
-            try {
-                if (conn != null) {
-                    conn.close();
-                }
-            } catch (SQLException ex) {
-                System.out.println(ex.getMessage());
-            }
-        }
-    }
-
-
 }
