@@ -16,13 +16,15 @@ public class read_unknown_file {
 
     public static void main(String[] args) {
 
-        String db_name = "filings.db";
+//        String db_name = "filings.db";
+//
+//        List<String> ciks = new ArrayList<>();
+//        ciks.add("0001607863");
+//        ciks.add("0000919859");
+//
+//        pass_date(ciks, db_name, "db");
 
-        List<String> ciks = new ArrayList<>();
-        ciks.add("0001607863");
-        ciks.add("0000919859");
-
-        pass_date(ciks, db_name, "db");
+        menu();
     }
 
     // This is to be used later when users can select what they are looking to do
@@ -30,21 +32,75 @@ public class read_unknown_file {
 
         Scanner sc = new Scanner(System.in);
 
-        String intro = "\nEnter the (c)haracter from the options listed";
-
         /*
-        Enable selecting how many files you want to retrieve, make default
-        be the constant value we set
+            Enable selecting how many files you want to retrieve, make default
+            be the constant value we set
         */
+
+        String intro = "\nEnter the (c)haracter from the options listed (ie c in this case)";
         String options =
-            "Read data into a new (d)atabase\n" +
-            "Read data into an (e)xisting database\n" +
-            "Read data into a new (c)sv\n" +
-            "Read data into an e(x)isting csv" +
-            "(q)uit";
-        String write_char = ">";
+            "Read data into a sqlite3 (d)atabase\n" +
+            "Read data into a (c)sv file\n" +
+            "(q)uit\n>";
+        String extension_reminder = "Remember to enter the file extension of " +
+                "your .db or .csv file.";
+
+        String db_name;
+        String csv_name;
+        List<String> cik_list;
+
+        System.out.println(intro);
+        System.out.print(options);
+        String user_input = sc.nextLine();
+        System.out.println(extension_reminder);
+        switch (user_input.toLowerCase()) {
+            case "#":
+                return;
+            case "d":
+                System.out.print("Enter the name of the database you would like to use" +
+                        "\n>");
+                db_name = sc.nextLine();
+                cik_list = get_ciks();
+                pass_date(cik_list, db_name, "db");
+                System.out.println("Your data should be in a table called assets in your db");
+                break;
+            case "c":
+                System.out.print("Enter the name of the csv you would like to use" +
+                        "\n>");
+                csv_name = sc.nextLine();
+                cik_list = get_ciks();
+                pass_date(cik_list, csv_name, "csv");
+                break;
+            default:
+                System.out.println("I did not catch that, enter # to quit " +
+                        "or press ctrl-c on your keyboard.");
+        }
+
 
     }
+
+    public static List<String> get_ciks() {
+        List<String> cik_list = new ArrayList<>();
+
+        String cik_instructions = "Now you can enter CIK numbers one at a time\n" +
+                "When you are finished entering ciks press # then press enter.";
+        String get_cik = "Enter a CIK or # then press enter\n>";
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println(cik_instructions);
+        String local_cik;
+        for(;true;) {
+            System.out.print(get_cik);
+            local_cik = sc.nextLine();
+            if(local_cik.equals("#")) {
+                sc.close();
+                return cik_list;
+            }
+            cik_list.add(local_cik);
+        }
+    }
+
 
     // The abstraction of passing data, pass your params and this does the rest
     public static void pass_date(List<String> ciks, String output_thing_name, String pass_to) {
