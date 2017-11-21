@@ -1,22 +1,43 @@
-These are the simple instructions for running the 13f getter. 
+***Reminder: This program is meant for learning purposes, I do not and cannot recommend
+using it to make investment decisions.***
+
+Keep in mind you will probably need at least java 7 to run this program.
+
+These are the simple instructions for running the 13f getter.
 
 Before your first run be sure to run the script called Run_Before_Jar.sh.
 
-To do this on a linux based system you can go to its directory in the terminal and enter ./Run_Before_Jar.sh followed by pressing the enter key. 
+To do this on a linux based system you can go to its directory in the terminal
+and enter ./Run_Before_Jar.sh followed by pressing the enter key.
 
-If you are on windows I do not know if any of this will work but you can try just making 2 directories in the same directory as the jar. One called database and another called output_for_csvs. If you are only making csvs you really only need to make the csv one, but whatever. 
+If you are on windows I do not know if any of this will work but you can try just
+making 2 directories in the same directory as the jar. One called database and
+another called output_for_csvs. If you are only making csvs you really only need
+to make the csv one, but whatever.
 
-To run the jar you need at least java 7. To execute a jar you just enter java -jar Get_13f.jar then click enter and follow the instructions the program gives you. 
+To run the jar you need at least java 7.
+To execute a jar you just enter java -jar Get_13f.jar then click enter and
+follow the instructions the program gives you.
 
-It will ask for ciks and the number of filings you would like from each. Each additional filing you get adds another second per cik so you may only want to get 20 or 40 from each. (40 filings from 2 ciks takes a minimum of 80 seconds to get). 
+It will ask for ciks and the number of filings you would like from each.
+Each additional filing you get adds another second per cik so you may only want
+to get 20 or 40 from each.
+(40 filings from 2 ciks takes a around 80 seconds to get).
 
-To get CIK numbers you can go to the website: 
-https://www.sec.gov/edgar/searchedgar/companysearch.html 
-and search for companies. For example if you look up Baopost you will see several different companies. Find the one that has recent filings called 13F-HR. If you see that just take the CIK#, which should be located next to the companies name in the header. It should be a 10 digit number (I do not think I have seen one with letters) and you can use that as an input to the program when it asks for a CIK. 
+To get CIK numbers you can go to the website:
+https://www.sec.gov/edgar/searchedgar/companysearch.html
+and search for companies. For example if you look up Baopost you will see
+several different companies. Find the one that has recent filings called 13F-HR.
+If you see that just take the CIK#, which should be located next to the companies
+name in the header. It should be a 10 digit number (you do not need to enter the
+starting 0s) and you can use that as an input to the program when it asks for a CIK.
 
-You can find multiple ciks and input them all into the program to compare the holdings of several different firms. If you open the output csv in excel you can sort the data (with headers) by confirmation_period ascending then by excel_cusip. This will show which firms are holding the same securities. 
+You can find multiple ciks and input them all into the program to compare the
+holdings of several different firms. If you open the output csv in excel you can
+sort the data (with headers) by confirmation_period ascending then by excel_cusip.
+This will show which firms are holding the same securities.
 
-If you are going to use the database option you will need sqlite3 and a basic knowledge of databases. 
+If you are going to use the database option you will need sqlite3 and a basic knowledge of databases.
 
 Example first time run-through
 
@@ -29,4 +50,4 @@ test.csv
 0001037389
 #
 10
-Look in output_for_csvs folder and check out data  
+Look in output_for_csvs folder and check out data
