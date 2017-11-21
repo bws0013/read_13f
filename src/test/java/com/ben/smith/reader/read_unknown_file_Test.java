@@ -26,16 +26,16 @@ public class read_unknown_file_Test {
     @Test
     public void determine_file_type() {
 
-        List<String> old_1 = read_unknown_file.read_file(file_storage_location + "old_1.txt");
-        List<String> new_1 = read_unknown_file.read_file(file_storage_location + "new_1.txt");
-        List<String> new_2 = read_unknown_file.read_file(file_storage_location + "new_2.txt");
-        List<String> new_3 = read_unknown_file.read_file(file_storage_location + "new_3.txt");
+        List<String> old_1 = Main.read_file(file_storage_location + "old_1.txt");
+        List<String> new_1 = Main.read_file(file_storage_location + "new_1.txt");
+        List<String> new_2 = Main.read_file(file_storage_location + "new_2.txt");
+        List<String> new_3 = Main.read_file(file_storage_location + "new_3.txt");
 
 
-        String result_old_1 = read_unknown_file.determine_file_type(old_1);
-        String result_new_1 = read_unknown_file.determine_file_type(new_1);
-        String result_new_2 = read_unknown_file.determine_file_type(new_2);
-        String result_new_3 = read_unknown_file.determine_file_type(new_3);
+        String result_old_1 = Main.determine_file_type(old_1);
+        String result_new_1 = Main.determine_file_type(new_1);
+        String result_new_2 = Main.determine_file_type(new_2);
+        String result_new_3 = Main.determine_file_type(new_3);
 
         String expected_result_old_1 = "old_1";
         String expected_result_new_1 = "";

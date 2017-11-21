@@ -8,11 +8,11 @@ import java.util.regex.Pattern;
  * Created by bensmith on 11/7/17.
  * Used for getting lists of assets to be passed to a sql database later
  */
-class file_processor_old {
+public class File_Processor_Old {
 
     // Takes in a filename and returns the assets from that file
     static List<Asset> get_assets(List<String> text_lines) {
-        file_processor_old f = new file_processor_old();
+        File_Processor_Old f = new File_Processor_Old();
 
         List<String> valuable_lines = f.read_old_1(text_lines);
         int guessed_offset = f.collect_possible_cusip_offsets(valuable_lines);
@@ -96,7 +96,7 @@ class file_processor_old {
 
         Collections.sort(offsets);
 
-
+        // Find the location where number of offsets equals number of rows
         int offset_with_highest_count = offsets.get(0);
 
         for(int i = 1; i < offsets.size(); i++) {

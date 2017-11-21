@@ -17,7 +17,7 @@ import org.xml.sax.SAXException;
  * Created by bensmith on 11/11/17.
  * Used for getting lists of assets to be passed to a sql database later
  */
-public class file_processor_new {
+public class File_Processor_New {
 
     public static void main(String[] args) {
 
