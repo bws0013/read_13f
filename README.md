@@ -1,4 +1,4 @@
-# read_13f
+Â# read_13f
 
 This a java program I built to retrieve info from companies related to their holdings as listed on their [13f filings](https://www.investopedia.com/terms/f/form-13f.asp). These are essentially the long positions of holdings of investment companies. The filings are reported to the sec within around 45 days of the end of the quarter. So the filings of an investment firm for the 4th quarter of 2017 will be reported around February 15th 2018.
 
@@ -25,6 +25,16 @@ What does the program do?
 
 How do I run it?
 - See the top where I direct you to the Just_Do_It_Already directory.
+
+What is the legality of scraping this data?
+- According to the sec website, specifically
+https://www.sec.gov/edgar/searchedgar/accessing-edgar-data.htm
+(under Fair Access) with reference to this page:
+https://www.sec.gov/privacy.htm#security
+we should be good to use this data so long as we attempt to minimize their server load and
+do not send more than 10 requests per second. The maximum number of requests one could send with
+my program is 2 (and likely it actually only sends 1), so this program should be allowed. If I receive any indication that my program should not be used I will let everyone know and private the project.
+- Thanks reddit user mapleloafs for asking about this!
 
 Why is such a program necessary and why is this program not shorter?
 - I enjoy coding and investing, this combines those 2 hobbies. It is long because there are several different formats these filings can appear in. I originally built a program to parse each type separately but it was too cumbersome and will never see the light of day.
