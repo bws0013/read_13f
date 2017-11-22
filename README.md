@@ -1,4 +1,4 @@
-Â# read_13f
+## read_13f
 
 This a java program I built to retrieve info from companies related to their holdings as listed on their [13f filings](https://www.investopedia.com/terms/f/form-13f.asp). These are essentially the long positions of holdings of investment companies. The filings are reported to the sec within around 45 days of the end of the quarter. So the filings of an investment firm for the 4th quarter of 2017 will be reported around February 15th 2018.
 
@@ -45,6 +45,11 @@ Why does it take so long to run?
 
 What can you use this for?
 - I use it to compare different portfolios of companies. You can use it for something similar if you would like?
+
+What is the difference between a 13F-HR and a 13F-HR/A? Which does this program use?
+- When companies submit their filings they may have more info that they want to add later. This new information is made into what is called a 13F-HR/A.
+- My program only uses 13F-HR as I was only running it after the initial release of 13F filings every quarter, so if a company submitted amended ones later I had already made my investment decisions.
+- I am in the process of making a way to incorporate the amended filings as at the moment they are ignored.
 
 What is the difference between a cusip and an excel_cusip?
 - Short answer, I enjoy uniformity
