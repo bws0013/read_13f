@@ -59,6 +59,7 @@ public class Output_To_Csv {
         line += "\"num_shares\",";
         line += "\"type\",";
         line += "\"discretion\",";
+        line += "\"submit_date\"";
         return line;
     }
 

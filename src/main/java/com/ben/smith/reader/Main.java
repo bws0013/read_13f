@@ -206,7 +206,7 @@ public class Main {
         List<Asset> assets_fixed = new ArrayList<>();
 
         for(Asset a : assets) {
-            a.add_identifying_info(header[0], header[1]);
+            a.add_identifying_info(header[0], header[1], header[2]);
             assets_fixed.add(a);
         }
 
@@ -291,6 +291,7 @@ public class Main {
 
         String cik = "#";
         String report_period = "#";
+        String submit_date = "#";
 
         for(String line : text_lines) {
             String[] elements = line.split(":");
@@ -298,12 +299,14 @@ public class Main {
                 cik = elements[1];
             } else if(elements[0].equals("CONFORMEDPERIODOFREPORT")) {
                 report_period = elements[1];
+            } else if(elements[0].equals("FILEDASOFDATE")) {
+                submit_date = elements[1];
             }
             if(line.equals("CONFORMEDSUBMISSIONTYPE:13F-HR/A")) {
-                return new String[]{"#", "#"};
+                return new String[]{"#", "#", "#"};
             }
         }
 
-        return new String[]{cik, report_period};
+        return new String[]{cik, report_period, submit_date};
     }
 }
