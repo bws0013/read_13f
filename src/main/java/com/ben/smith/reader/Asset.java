@@ -17,6 +17,7 @@ public class Asset {
     public String num_shares;
     public String type;
     public String discretion;
+    public String submit_date;
 
     // The only constructor we should need, we add the cik and confirmation_period later
     public Asset(String name, String title, String cusip, String cash_value, String num_shares, String type, String discretion) {
@@ -31,9 +32,10 @@ public class Asset {
     }
 
     // Add the cik and confirmation_period of the asset to this asset object
-    public void add_identifying_info(String cik, String confirmation_period) {
+    public void add_identifying_info(String cik, String confirmation_period, String submit_date) {
         this.cik = cik;
         this.confirmation_period = fix_date(confirmation_period);
+        this.submit_date = fix_date(submit_date);
     }
 
     // 20170630 -> 2017-06-30, fix the date so that it conforms to yyyy-mm-dd
@@ -56,7 +58,8 @@ public class Asset {
         line += "\"" + cash_value + "\",";
         line += "\"" + num_shares + "\",";
         line += "\"" + type + "\",";
-        line += "\"" + discretion + "\"";
+        line += "\"" + discretion + "\",";
+        line += "\"" + submit_date + "\"";
         return line;
     }
 
@@ -160,4 +163,13 @@ public class Asset {
     public void setConfirmation_period(String confirmation_period) {
         this.confirmation_period = confirmation_period;
     }
+
+    public String getSubmit_date() {
+        return submit_date;
+    }
+
+    public void setSubmit_date(String submit_date) {
+        this.submit_date = submit_date;
+    }
 }
+

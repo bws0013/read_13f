@@ -34,7 +34,7 @@ public class Database_Layer {
             conn.setAutoCommit(false);
 
             PreparedStatement ps =
-                    conn.prepareStatement("insert into Assets values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                    conn.prepareStatement("insert into Assets values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
             // Add each asset to a batch statement to add all the data at once.
             for(Asset a : assets) {
@@ -42,6 +42,7 @@ public class Database_Layer {
                 int cash_val = Integer.parseInt(a.getCash_value());
                 int num_shares = Integer.parseInt(a.getNum_shares());
                 java.sql.Date conf_period = java.sql.Date.valueOf(a.getConfirmation_period());
+                java.sql.Date sub_date = java.sql.Date.valueOf(a.getSubmit_date());
 
                 ps.setString(1, a.getCik());
                 ps.setDate(2, conf_period);
@@ -53,7 +54,7 @@ public class Database_Layer {
                 ps.setInt(8, num_shares);
                 ps.setString(9, a.getType());
                 ps.setString(10, a.getDiscretion());
-
+                ps.setDate(11, sub_date);
 
                 ps.executeUpdate(); //JDBC queues this for later execution
             }
@@ -180,14 +181,15 @@ public class Database_Layer {
                         "CREATE TABLE IF NOT EXISTS Assets(\n " +
                         "cik text NOT NULL,\n" +
                         "confirmation_period DATE NOT NULL,\n" +
-                        " name text,\n" +
-                        " title text,\n" +
-                        " cusip text NOT NULL,\n" +
-                        " excel_cusip text,\n" +
-                        " cash_value integer,\n" +
-                        " num_shares integer,\n" +
-                        " type text,\n" +
-                        " discretion);"
+                        "name text,\n" +
+                        "title text,\n" +
+                        "cusip text NOT NULL,\n" +
+                        "excel_cusip text,\n" +
+                        "cash_value integer,\n" +
+                        "num_shares integer,\n" +
+                        "type text,\n" +
+                        "discretion text,\n" +
+                        "submit_date date);"
                 );
 
         try {

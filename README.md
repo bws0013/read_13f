@@ -16,6 +16,8 @@ That said, I built a program to test the hypothesis that the combined portfolios
 - cik - Central index key, a unique identifier for each firm who submits 13f and other filings to the sec
 - conformation period - End date of reporting period of filing
 - cusip - A unique identifier for a security
+- submit_date - The date the files were submitted to the sec
+- cash_value - The value of the security (in dollars) divided by 1000
 
 
 #### Questions you may have
