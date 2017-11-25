@@ -131,13 +131,13 @@ public class File_Processor_Old {
         List<String> lines_we_care_about = new ArrayList<>();
 
         for(int i = 0; i < text_lines.size(); i++) {
-            if(text_lines.get(i).startsWith("<S>")) {
+            if(text_lines.get(i).trim().startsWith("<S>")) {
                 for(int j = i + 1; j < text_lines.size(); j++) {
                     if(text_lines.get(j).length() < 1) {
                         break;
                     }
-                    if(text_lines.get(j).startsWith("Report Summary")
-                            || text_lines.get(j).startsWith("</TABLE>")) {
+                    if(text_lines.get(j).trim().startsWith("Report Summary")
+                            || text_lines.get(j).trim().startsWith("</TABLE>")) {
                         break;
                     }
                     lines_we_care_about.add(text_lines.get(j));
@@ -148,13 +148,14 @@ public class File_Processor_Old {
         return lines_we_care_about;
     }
 
+    // Read a different formatting of the old filing type
     private List<String> read_old_2(List<String> text_lines) {
         List<String> lines_we_care_about = new ArrayList<>();
 
         for(int i = 0; i < text_lines.size(); i++) {
-            if(text_lines.get(i).startsWith("NAME OF ISSUER")) {
+            if(text_lines.get(i).trim().startsWith("NAME OF ISSUER")) {
                 for(int j = i + 2; j < text_lines.size(); j++) {
-                    if(text_lines.get(j).startsWith("</TABLE>")) {
+                    if(text_lines.get(j).trim().startsWith("</TABLE>")) {
                         break;
                     }
                     lines_we_care_about.add(text_lines.get(j));
