@@ -15,7 +15,19 @@ public class File_Processor_Old {
         File_Processor_Old f = new File_Processor_Old();
 
         List<String> valuable_lines = f.read_old_1(text_lines);
-        int guessed_offset = f.collect_possible_cusip_offsets(valuable_lines);
+        int guessed_offset = f.collect_possible_cusip_offsets_1(valuable_lines);
+        if(guessed_offset == -1) {
+            valuable_lines = f.read_old_2(text_lines);
+            guessed_offset = f.collect_possible_cusip_offsets_1(valuable_lines);
+            if(guessed_offset == -1) {
+                System.out.println("Issue with this doc");
+                for(String line : valuable_lines) {
+                    System.out.println(line);
+                    System.exit(1);
+                }
+            }
+        }
+
         return f.create_assets(guessed_offset, valuable_lines);
     }
 
@@ -69,8 +81,10 @@ public class File_Processor_Old {
         return assets;
     }
 
+
+
     // Analyze the frequency of 9 character sequences to determine the cusip.
-    private int collect_possible_cusip_offsets(List<String> lines) {
+    private int collect_possible_cusip_offsets_1(List<String> lines) {
 
         Map<Integer, Integer> offset_to_count = new HashMap<>();
 
@@ -90,8 +104,7 @@ public class File_Processor_Old {
         List<Integer> offsets = new ArrayList<>(offset_to_count.keySet());
 
         if(offsets.size() == 0) {
-            System.out.println("No offsets found!");
-            System.exit(1);
+            return -1;
         }
 
         Collections.sort(offsets);
@@ -106,8 +119,8 @@ public class File_Processor_Old {
         }
 
         if (offset_to_count.get(offset_with_highest_count) != lines.size()) {
-            System.out.println("Fewer cusips than cusip lines. Check the data!");
-            System.exit(1);
+            // System.out.println("Fewer cusips than cusip lines. Check the data!");
+            return -1;
         }
 
         return offset_with_highest_count;
@@ -115,13 +128,33 @@ public class File_Processor_Old {
 
     // Read the old filing type and get the relevant lines from it
     private List<String> read_old_1(List<String> text_lines) {
-
         List<String> lines_we_care_about = new ArrayList<>();
 
         for(int i = 0; i < text_lines.size(); i++) {
             if(text_lines.get(i).startsWith("<S>")) {
                 for(int j = i + 1; j < text_lines.size(); j++) {
-                    if(text_lines.get(j).startsWith("Report Summary")) {
+                    if(text_lines.get(j).length() < 1) {
+                        break;
+                    }
+                    if(text_lines.get(j).startsWith("Report Summary")
+                            || text_lines.get(j).startsWith("</TABLE>")) {
+                        break;
+                    }
+                    lines_we_care_about.add(text_lines.get(j));
+                }
+                break;
+            }
+        }
+        return lines_we_care_about;
+    }
+
+    private List<String> read_old_2(List<String> text_lines) {
+        List<String> lines_we_care_about = new ArrayList<>();
+
+        for(int i = 0; i < text_lines.size(); i++) {
+            if(text_lines.get(i).startsWith("NAME OF ISSUER")) {
+                for(int j = i + 2; j < text_lines.size(); j++) {
+                    if(text_lines.get(j).startsWith("</TABLE>")) {
                         break;
                     }
                     lines_we_care_about.add(text_lines.get(j));
