@@ -39,8 +39,8 @@ public class Database_Layer {
             // Add each asset to a batch statement to add all the data at once.
             for(Asset a : assets) {
                 b = a;
-                int cash_val = Integer.parseInt(a.getCash_value());
-                int num_shares = Integer.parseInt(a.getNum_shares());
+                int cash_val = Integer.parseInt(a.getCash_value().replaceAll(",", ""));
+                int num_shares = Integer.parseInt(a.getNum_shares().replaceAll(",", ""));
                 java.sql.Date conf_period = java.sql.Date.valueOf(a.getConfirmation_period());
                 java.sql.Date sub_date = java.sql.Date.valueOf(a.getSubmit_date());
 
