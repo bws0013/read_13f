@@ -6,7 +6,9 @@ This a java program I built to retrieve info from companies related to their hol
 
 Also keep in mind you will probably need at least java 7 to run this program.
 
-If you do not care about the inner workings of the program you can clone/download the repo and follow the instructions in the folder called Just_Do_It_Already. Everything after this sentence is just me rambling about the program and its development and has nothing to do with running it.
+You may be run the program and get a message that says something like Issue with this doc. If you get this that means the program read as many documents as it could before it ran into an issue with one of the files. This is probably a formatting issue. The more old docs I look through the more weird formatting I am seeing. I will figure out a way to address this. There will still be an output of all of the files the program was able to process. 
+
+#### If you do not care about the inner workings of the program you can clone/download the repo and follow the instructions in the folder called Just_Do_It_Already. Everything after this sentence is just me rambling about the program and its development and has nothing to do with running it.
 
 That said, I built a program to test the hypothesis that the combined portfolios of several different profitable firms could be used to outperform the index. This is a remake of that program that, this is much easier to use. That I am releasing anything should tell you whether or not my tests yielded success in proving my hypothesis.
 
