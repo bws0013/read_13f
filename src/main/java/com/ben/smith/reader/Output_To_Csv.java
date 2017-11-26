@@ -75,6 +75,9 @@ public class Output_To_Csv {
             sb = new StringBuilder(get_headers());
             sb.append("\n");
         }
+        if(assets.isEmpty()) {
+            return;
+        }
 
         try(FileWriter fw = new FileWriter(output_filename, true);
             BufferedWriter bw = new BufferedWriter(fw);

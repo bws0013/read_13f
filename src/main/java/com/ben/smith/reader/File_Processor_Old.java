@@ -20,11 +20,8 @@ public class File_Processor_Old {
             valuable_lines = f.read_old_2(text_lines);
             guessed_offset = f.collect_possible_cusip_offsets_1(valuable_lines);
             if(guessed_offset == -1) {
-                System.out.println("Issue with this doc");
-                for(String line : valuable_lines) {
-                    System.out.println(line);
-                    System.exit(1);
-                }
+                System.out.println("Issue with a doc");
+                return new ArrayList<Asset>();
             }
         }
 
