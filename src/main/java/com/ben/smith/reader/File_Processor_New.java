@@ -24,7 +24,7 @@ public class File_Processor_New {
 //        String filename = "./storage/new_1.txt";
 //        String addition = "";
 //
-//        List<Asset> assets = get_assets(filename, addition);
+//        List<Asset> assets = get_assets(f ilename, addition);
 //
 //        for(Asset a : assets) {
 //            a.print_all_fields();

@@ -22,7 +22,7 @@ public class Main {
 //        ciks.add("0001607863");
 //        ciks.add("0000919859");
 //
-//        pass_date(ciks, db_name, "db");
+//        pass_data(ciks, db_name, "db");
 
         menu();
     }
@@ -41,6 +41,8 @@ public class Main {
         String options =
             "Read data into a sqlite3 (d)atabase\n" +
             "Read data into a (c)sv file\n" +
+            "Read (l)ocal data into a sqlite3 database\n" +
+            "Read l(o)cal data into a csv file\n" +
             "(q)uit\n>";
         String extension_reminder = "Remember to enter the file extension of " +
                 "your .db or .csv file.";
@@ -61,7 +63,7 @@ public class Main {
                         "\n>");
                 db_name = sc.nextLine();
                 cik_list = get_ciks();
-                pass_date(cik_list, db_name, "db");
+                pass_data(cik_list, db_name, "db");
                 System.out.println("Your data should be in a table called assets in your db");
                 break;
             case "c":
@@ -70,7 +72,24 @@ public class Main {
                         "\n>");
                 csv_name = sc.nextLine();
                 cik_list = get_ciks();
-                pass_date(cik_list, csv_name, "csv");
+                pass_data(cik_list, csv_name, "csv");
+                break;
+            case "l":
+                System.out.println(extension_reminder);
+                System.out.print("Enter the name of the database you would like to use" +
+                        "\n>");
+                db_name = sc.nextLine();
+                cik_list = get_ciks();
+                pass_data_local(cik_list, db_name, "db");
+                System.out.println("Your data should be in a table called assets in your db");
+                break;
+            case "o":
+                System.out.println(extension_reminder);
+                System.out.print("Enter the name of the csv you would like to use" +
+                        "\n>");
+                csv_name = sc.nextLine();
+                cik_list = get_ciks();
+                pass_data_local(cik_list, csv_name, "csv");
                 break;
             default:
                 System.out.println("I did not catch that, enter # to quit " +
@@ -126,7 +145,7 @@ public class Main {
 
 
     // The abstraction of passing data, pass your params and this does the rest
-    public static void pass_date(List<String> ciks, String output_thing_name, String pass_to) {
+    public static void pass_data(List<String> ciks, String output_thing_name, String pass_to) {
 
         for(String cik : ciks) {
             System.out.println("Obtaining Documents for: " + cik);
@@ -140,7 +159,24 @@ public class Main {
                 return;
             }
         }
+    }
 
+    // TODO build this out
+    // The abstraction of passing data, pass your params and this does the rest from the local machine
+    public static void pass_data_local(List<String> ciks, String output_thing_name, String pass_to) {
+
+        for(String cik : ciks) {
+            System.out.println("Obtaining Documents for: " + cik);
+            List<String> urls = Web_Scraper.createFinDocs(cik);
+            if(pass_to.equals("csv")) {
+                add_to_csv(urls, output_thing_name);
+            } else if(pass_to.equals("db")) {
+                add_to_database(urls, output_thing_name);
+            } else {
+                System.out.println("Chose csv or db. Exiting");
+                return;
+            }
+        }
     }
 
     // Abstraction of adding data to a csv

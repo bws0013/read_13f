@@ -23,7 +23,7 @@ class Global_Constants {
     // Output directory for created csv files
     static final String output_dir = "./output_for_csvs/";
 
-    // THis may be used later if we want to keep our filings stored somewhere
+    // This may be used later if we want to keep our filings stored somewhere
     // after we download and analyze them.
     static final boolean keep_downloaded_filings = false;
 
