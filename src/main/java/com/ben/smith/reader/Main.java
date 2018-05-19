@@ -95,7 +95,8 @@ public class Main {
             case "5":
                 System.out.print("Enter the path of the local directory you would like to use" +
                         "\n>");
-//                String directory_name = sc.nextLine();
+                Local_Reads.determine_broken_files(sc.nextLine());
+                break;
             default:
                 System.out.println("I did not catch that, enter # to quit " +
                         "or press ctrl-c on your keyboard.");
