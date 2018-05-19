@@ -43,6 +43,7 @@ public class Main {
             "(2) Read data into a csv file\n" +
             "(3) Read local data into a sqlite3 database\n" +
             "(4) Read local data into a csv file\n" +
+            "(5) Read a directory for files that cannot be parsed\n" +
             "(q)uit\n>";
         String extension_reminder = "Remember to enter the file extension of " +
                 "your .db or .csv file.";
@@ -91,6 +92,10 @@ public class Main {
                 cik_list = get_ciks();
                 pass_data_local(cik_list, csv_name, "csv");
                 break;
+            case "5":
+                System.out.print("Enter the path of the local directory you would like to use" +
+                        "\n>");
+//                String directory_name = sc.nextLine();
             default:
                 System.out.println("I did not catch that, enter # to quit " +
                         "or press ctrl-c on your keyboard.");
@@ -161,7 +166,6 @@ public class Main {
         }
     }
 
-    // TODO build this out
     // The abstraction of passing data, pass your params and this does the rest from the local machine
     public static void pass_data_local(List<String> ciks, String output_thing_name, String pass_to) {
 
@@ -171,12 +175,6 @@ public class Main {
             System.out.println("Obtaining Documents for: " + cik);
             List<String> file_paths = Local_Reads.extract_files_from_folder(start_path + cik);
 
-            for(String fp : file_paths) {
-                System.out.println(fp);
-            }
-
-            System.exit(0);
-//            List<String> file_paths = Web_Scraper.createFinDocs(cik);
             if(pass_to.equals("csv")) {
                 add_to_csv_local(file_paths, output_thing_name);
             } else if(pass_to.equals("db")) {
@@ -200,13 +198,13 @@ public class Main {
     }
 
     // Abstraction of adding data to a database
-    public static void add_to_database_local(List<String> urls, String db_name) {
+    public static void add_to_database_local(List<String> files_in_folder, String db_name) {
 
         Map<String, Set<String>> cik_to_conf_period
                 = Database_Layer.get_added_files(db_name);
 
-        for(String url : urls) {
-            List<String> text_lines = Web_Scraper.get_file_contents(url);
+        for(String local_13f : files_in_folder) {
+            List<String> text_lines = Local_Reads.read_file(local_13f);
             List<Asset> assets = pass_to_processors(text_lines);
             if (assets.size() == 0) return;
 

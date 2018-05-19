@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  */
 public class File_Processor_Old {
 
-    // Takes in a filename and returns the assets from that file
+    // Takes in the lines of a file and returns the assets from that file
     static List<Asset> get_assets(List<String> text_lines) {
         File_Processor_Old f = new File_Processor_Old();
 
