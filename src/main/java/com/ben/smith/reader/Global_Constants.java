@@ -36,4 +36,7 @@ class Global_Constants {
     static void set_changeable_numDocs(int new_numDocs) {
         numDocs = new_numDocs;
     }
+
+    // Starting directory for local files that will be read and processed.
+    static final String start_path_for_local_files = System.getProperty("user.dir") + "/examples/local_filings/";
 }

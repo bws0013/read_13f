@@ -40,7 +40,7 @@ public class Output_To_Csv {
 
         // This actually processes the files and sends them to the output csv
         for(String filename : filenames) {
-            List<String> text_lines = Main.read_file(filename);
+            List<String> text_lines = Local_Reads.read_file(filename);
             List<Asset> assets = Main.pass_to_processors(text_lines);
             print_to_csv(output_file_name, assets);
         }
