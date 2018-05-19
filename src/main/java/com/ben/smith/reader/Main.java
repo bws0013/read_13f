@@ -170,6 +170,12 @@ public class Main {
         for(String cik : ciks) {
             System.out.println("Obtaining Documents for: " + cik);
             List<String> file_paths = Local_Reads.extract_files_from_folder(start_path + cik);
+
+            for(String fp : file_paths) {
+                System.out.println(fp);
+            }
+
+            System.exit(0);
 //            List<String> file_paths = Web_Scraper.createFinDocs(cik);
             if(pass_to.equals("csv")) {
                 add_to_csv_local(file_paths, output_thing_name);

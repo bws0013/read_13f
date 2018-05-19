@@ -16,6 +16,11 @@ public class Local_Reads {
         File aDirectory = new File(folder_path);
         String[] filesInDir = aDirectory.list();
         List<String> files = new ArrayList<String>(Arrays.asList(filesInDir));
+
+        for(int i = 0; i < files.size(); i++) {
+            files.set(i, folder_path + "/" + files.get(i));
+        }
+
         return files;
     }
 
