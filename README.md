@@ -3,10 +3,11 @@
 This a java program I built to retrieve info from companies related to their holdings as listed on their [13f filings](https://www.investopedia.com/terms/f/form-13f.asp). These are essentially the long positions of holdings of investment companies. The filings are reported to the sec within around 45 days of the end of the quarter. So the filings of an investment firm for the 4th quarter of 2017 will be reported around February 15th 2018.
 
 ##### Reminder: This program is meant for learning purposes, I do not and cannot recommend using it to make investment decisions.
+#### Second Reminder: This program is still under development, some features, such as option 5 on the prompt do not work. 
 
 Also keep in mind you will probably need at least java 7 to run this program.
 
-You may be run the program and get a message that says something like Issue with this doc. If you get this that means the program read as many documents as it could before it ran into an issue with one of the files. This is probably a formatting issue. The more old docs I look through the more weird formatting I am seeing. I will figure out a way to address this. There will still be an output of all of the files the program was able to process. 
+You may be run the program and get a message that says something like Issue with this doc. If you get this that means the program read as many documents as it could before it ran into an issue with one of the files. This is probably a formatting issue. The more old docs I look through the more weird formatting I am seeing. I will figure out a way to address this. There will still be an output of all of the files the program was able to process.
 
 #### If you do not care about the inner workings of the program you can clone/download the repo and follow the instructions in the folder called Just_Do_It_Already. Everything after this sentence is just me rambling about the program and its development and has nothing to do with running it.
 

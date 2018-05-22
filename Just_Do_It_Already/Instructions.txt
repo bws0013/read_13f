@@ -24,6 +24,11 @@ Each additional filing you get adds another second per cik so you may only want
 to get 20 or 40 from each.
 (40 filings from 2 ciks takes a around 80 seconds to get).
 
+#### Running in local mode
+To read local filings, put all of the sets of 13fs you want to look at inside the folder examples/local_filings.
+As an example you could have a folder called 0001608057 that has filings within in it such as 20120706.txt.
+When running the program you will be able to refer to these folders by entering the name of these folders.
+
 To get CIK numbers you can go to the website:
 https://www.sec.gov/edgar/searchedgar/companysearch.html
 and search for companies. For example if you look up Baopost you will see

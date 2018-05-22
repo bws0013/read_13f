@@ -22,7 +22,7 @@ public class Main {
 //        ciks.add("0001607863");
 //        ciks.add("0000919859");
 //
-//        pass_date(ciks, db_name, "db");
+//        pass_data(ciks, db_name, "db");
 
         menu();
     }
@@ -37,10 +37,13 @@ public class Main {
             be the constant value we set
         */
 
-        String intro = "\nEnter the (c)haracter from the options listed (ie c in this case)";
+        String intro = "\nEnter the (n)umber from the options listed (ie c in this case)";
         String options =
-            "Read data into a sqlite3 (d)atabase\n" +
-            "Read data into a (c)sv file\n" +
+            "(1) Read data into a sqlite3 database\n" +
+            "(2) Read data into a csv file\n" +
+            "(3) Read local data into a sqlite3 database\n" +
+            "(4) Read local data into a csv file\n" +
+            "(5) Read a directory for files that cannot be parsed\n" +
             "(q)uit\n>";
         String extension_reminder = "Remember to enter the file extension of " +
                 "your .db or .csv file.";
@@ -55,22 +58,44 @@ public class Main {
         switch (user_input.toLowerCase()) {
             case "q":
                 return;
-            case "d":
+            case "1":
                 System.out.println(extension_reminder);
                 System.out.print("Enter the name of the database you would like to use" +
                         "\n>");
                 db_name = sc.nextLine();
                 cik_list = get_ciks();
-                pass_date(cik_list, db_name, "db");
+                pass_data(cik_list, db_name, "db");
                 System.out.println("Your data should be in a table called assets in your db");
                 break;
-            case "c":
+            case "2":
                 System.out.println(extension_reminder);
                 System.out.print("Enter the name of the csv you would like to use" +
                         "\n>");
                 csv_name = sc.nextLine();
                 cik_list = get_ciks();
-                pass_date(cik_list, csv_name, "csv");
+                pass_data(cik_list, csv_name, "csv");
+                break;
+            case "3":
+                System.out.println(extension_reminder);
+                System.out.print("Enter the name of the database you would like to use" +
+                        "\n>");
+                db_name = sc.nextLine();
+                cik_list = get_ciks();
+                pass_data_local(cik_list, db_name, "db");
+                System.out.println("Your data should be in a table called assets in your db");
+                break;
+            case "4":
+                System.out.println(extension_reminder);
+                System.out.print("Enter the name of the csv you would like to use" +
+                        "\n>");
+                csv_name = sc.nextLine();
+                cik_list = get_ciks();
+                pass_data_local(cik_list, csv_name, "csv");
+                break;
+            case "5":
+                System.out.print("Enter the path of the local directory you would like to use" +
+                        "\n>");
+                Local_Reads.determine_broken_files(sc.nextLine());
                 break;
             default:
                 System.out.println("I did not catch that, enter # to quit " +
@@ -126,7 +151,7 @@ public class Main {
 
 
     // The abstraction of passing data, pass your params and this does the rest
-    public static void pass_date(List<String> ciks, String output_thing_name, String pass_to) {
+    public static void pass_data(List<String> ciks, String output_thing_name, String pass_to) {
 
         for(String cik : ciks) {
             System.out.println("Obtaining Documents for: " + cik);
@@ -140,8 +165,65 @@ public class Main {
                 return;
             }
         }
-
     }
+
+    // The abstraction of passing data, pass your params and this does the rest from the local machine
+    public static void pass_data_local(List<String> ciks, String output_thing_name, String pass_to) {
+
+        String start_path = Global_Constants.start_path_for_local_files;
+
+        for(String cik : ciks) {
+            System.out.println("Obtaining Documents for: " + cik);
+            List<String> file_paths = Local_Reads.extract_files_from_folder(start_path + cik);
+
+            if(pass_to.equals("csv")) {
+                add_to_csv_local(file_paths, output_thing_name);
+            } else if(pass_to.equals("db")) {
+                add_to_database_local(file_paths, output_thing_name);
+            } else {
+                System.out.println("Chose csv or db. Exiting");
+                return;
+            }
+        }
+    }
+
+    // Abstraction of adding data to a csv
+    public static void add_to_csv_local(List<String> files_in_folder, String csv_name) {
+
+        for(String local_13f : files_in_folder) {
+            List<String> text_lines = Local_Reads.read_file(local_13f);
+            List<Asset> assets = pass_to_processors(text_lines);
+
+            Output_To_Csv.print_to_csv(Global_Constants.output_dir + csv_name, assets);
+        }
+    }
+
+    // Abstraction of adding data to a database
+    public static void add_to_database_local(List<String> files_in_folder, String db_name) {
+
+        Map<String, Set<String>> cik_to_conf_period
+                = Database_Layer.get_added_files(db_name);
+
+        for(String local_13f : files_in_folder) {
+            List<String> text_lines = Local_Reads.read_file(local_13f);
+            List<Asset> assets = pass_to_processors(text_lines);
+            if (assets.size() == 0) return;
+
+            String cik = assets.get(0).getCik();
+            String conf_period = assets.get(0).getConfirmation_period();
+
+            if (cik_to_conf_period.containsKey(cik)) {
+                Set<String> conf_periods = cik_to_conf_period.get(cik);
+                if (conf_periods.contains(conf_period)) {
+                    System.out.printf("Unable to add %s at %s!\n", cik, conf_period);
+                    continue;
+                }
+            }
+
+            Database_Layer.add_date(db_name, assets);
+        }
+    }
+
 
     // Abstraction of adding data to a csv
     public static void add_to_csv(List<String> urls, String csv_name) {
@@ -225,28 +307,6 @@ public class Main {
         String xml_type = xml_type_getter(text_lines);
 
         return xml_type;
-    }
-
-    // Read a file into a string list
-    static List<String> read_file(String filename) {
-        List<String> text_lines = new ArrayList<String>();
-
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(filename));
-            String line = br.readLine();
-
-            while (line != null) {
-                text_lines.add(line);
-                line = br.readLine();
-            }
-            br.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return text_lines;
     }
 
     // Get the type xml variant used in the 13f
