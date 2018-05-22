@@ -84,4 +84,4 @@ target/*
 
 test/
 
-examples/local_filings/*
+examples/local_filings/00*

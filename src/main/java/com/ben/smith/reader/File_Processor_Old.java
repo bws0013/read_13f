@@ -28,6 +28,24 @@ public class File_Processor_Old {
         return f.create_assets(guessed_offset, valuable_lines);
     }
 
+    // Determines if the assets in a file are readable
+    static boolean are_assets_readable(List<String> text_lines) {
+        File_Processor_Old f = new File_Processor_Old();
+
+        List<String> valuable_lines = f.read_old_1(text_lines);
+        int guessed_offset = f.collect_possible_cusip_offsets_1(valuable_lines);
+        if(guessed_offset == -1) {
+            valuable_lines = f.read_old_2(text_lines);
+            guessed_offset = f.collect_possible_cusip_offsets_1(valuable_lines);
+            if(guessed_offset == -1) {
+                System.out.println("Issue with a doc");
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     // Get a list of Assets based on the information lines and the offset of the cusip
     private List<Asset> create_assets(int offset, List<String> lines) {
 

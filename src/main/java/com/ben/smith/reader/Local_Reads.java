@@ -50,14 +50,18 @@ public class Local_Reads {
         String[] filesInDir = aDirectory.list();
         List<String> files = new ArrayList<String>(Arrays.asList(filesInDir));
 
+        System.out.println(folder_path);
         List<String> file_lines;
         for(int i = 0; i < files.size(); i++) {
             file_lines = read_file(folder_path + "/" + files.get(i));
 
+            System.out.println(file_lines);
+            System.exit(0);
+
             // Returns "#" if unreadable.
-            String file_type = Main.determine_file_type(file_lines);
-            System.out.println(file_type);
-            if(file_type.equals("#")) {
+            boolean is_readable = File_Processor_Old.are_assets_readable(file_lines);
+            System.out.println(is_readable);
+            if(is_readable == false) {
                 System.out.println("Cannot understand file: " + files.get(i));
             }
         }
