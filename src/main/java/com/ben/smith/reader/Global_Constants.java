@@ -38,5 +38,5 @@ class Global_Constants {
     }
 
     // Starting directory for local files that will be read and processed.
-    static final String start_path_for_local_files = System.getProperty("user.dir") + "/examples/local_filings/";
+    static final String start_path_for_local_files = System.getProperty("user.dir") + "/../examples/local_filings/";
 }

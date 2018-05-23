@@ -18,6 +18,8 @@ public class Local_Reads {
         List<String> files = new ArrayList<String>(Arrays.asList(filesInDir));
 
         for(int i = 0; i < files.size(); i++) {
+//            System.out.println(folder_path + "/" + files.get(i));
+
             files.set(i, folder_path + "/" + files.get(i));
         }
 
